@@ -1,0 +1,125 @@
+<div *ngIf="tache">
+    <!--est ce que la ligne cid essus est problematique-->
+    <h2><span class="bandeauGaucheTitre">&ensp;&ensp;Liste des affectations pour la tache {{tache.nomTache}} du projet {{tache.projetMere.nomProjet}}</span></h2>
+    <br>
+    <br>
+    <br>
+    <button type="button" class="btn btn-info"
+            [routerLink]="['../../projet', tache.projetMere?.id ]" style="background-color: #6c7ae0;
+    border: 2px solid;
+    color: white;">Voir les infos relatives au Projet</button>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <!--j'ai du changer le contenu du *ngIf ci dessous. j'ai mis tache a la place de taches-->
+    <div class="table-responsive" *ngIf="participants?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr height="" style="background-color: #6c7ae0; color: white;">
+                <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
+                <th  class="center"><span>Login</span></th>
+                <!--<th><span jhiTranslate="progestoApp.tache.affectation.loginInge">Login de l'ingénieur</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.tache.nomTache">Nom de l'ingénieur</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.tache.descriptionTache">Prénom de l'ingénieur</span></th>-->
+                <th class="center"><span>Jours attribués</span></th>
+                <th class="center"><span>Jours effectués</span></th>
+                <th class="center"><span>Jours restant à faire</span></th>
+                <!--<th><span jhiTranslate="progestoApp.tache.joursVendusTache">Jours Vendus Tache</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.tache.projetMere">Projet Mere</span></th>-->
+                <th></th>
+                <!--<th></th>-->
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let participant of participants ;trackBy: trackId" class="colorationLigne" style="background-color: #fff;">
+                <!--<td><a [routerLink]="['../tache', tache.id ]">{{participant.id}}</a></td>-->
+                <!--<td>{{participant.id}}</td>-->
+                <td class="center">{{participant.userLogin}}</td>
+
+                <!--<td>{{tache.descriptionTache}}</td>-->
+                <!--<td>{{tache.debutTache | date:'mediumDate'}}</td>-->
+                <!--<td>{{tache.finTache | date:'mediumDate'}}</td>-->
+                <!--les champs ci dessous devront etre recupere via des api. il ne s'agira pas de champs angular-->
+                <!--<td><input readonly value="{{nombreDeJoursAttribuesVar}}"></td>-->
+                <td class="center"><input type="text" class="center" [(ngModel)]="participant.countFloat" readonly></td>
+                <td class="center"><input type="text" class="center" [(ngModel)]="participant.joursVendusEffectue" readonly></td>
+                <td class="center"><input type="text" class="center" [(ngModel)]="participant.joursVendusEffectue" readonly></td>
+                <!--<td>-->
+                    <!--<div *ngIf="tache.projetMere">-->
+                        <!--<a [routerLink]="['../projet', tache.projetMere?.id ]" >{{tache.projetMere?.nomProjet}}</a>-->
+                    <!--</div>-->
+                <!--</td>-->
+                <td class="center"><button type="button" class="btn btn-outline-success" style="background-color: #6c7ae0;
+    border: 2px solid;
+    color: white;">Consulter planning</button></td>
+<!--ci dessus, j'ai enlenve la partie [routerLink]="['../tacheAffectation', tacheParProjet.id ]" du boutton car ca ne correspond pas a ce que je desire-->
+                <!--<td class="text-right">-->
+                    <!--<div class="btn-group flex-btn-group-container">-->
+                        <!--<button type="submit"-->
+                                <!--[routerLink]="['../tache', tache.id ]"-->
+                                <!--class="btn btn-info btn-sm">-->
+                            <!--<span class="fa fa-eye"></span>-->
+                            <!--<span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>-->
+                        <!--</button>-->
+                        <!--<button type="submit"-->
+                                <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/edit'} }]"-->
+                                <!--replaceUrl="true"-->
+                                <!--class="btn btn-primary btn-sm">-->
+                            <!--<span class="fa fa-pencil"></span>-->
+                            <!--<span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>-->
+                        <!--</button>-->
+                        <!--<button type="submit"-->
+                                <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/delete'} }]"-->
+                                <!--replaceUrl="true"-->
+                                <!--class="btn btn-danger btn-sm">-->
+                            <!--<span class="fa fa-remove"></span>-->
+                            <!--<span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>-->
+                        <!--</button>-->
+                    <!--</div>-->
+                <!--</td>-->
+            </tr>
+
+
+            <!--[routerLink]="['../tacheAffectation', tacheParProjet.id ]"-->
+            <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/edit'} }]"-->
+            <!--[routerLink]="['/', { outlets: { popup: ['tache-new'] } }]">-->
+            <!--[routerLink]="['../tacheAffectation', tacheParProjet.id ]"-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<button type="submit" class="btn btn-outline-info btn-sm" [routerLink]="['/', { outlets: { popup: 'affectation-tache-new/'+ tache.id } }]" replaceUrl="true"-->
+                            <!--class="btn btn-primary">-->
+                        <!--<span class="glyphicon glyphicon-plus">Ajouter une affectation à cette tâche</span>-->
+                    <!--</button>-->
+                <!--</td>-->
+            <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+
+
+    <button type="button" [routerLink]="['/', { outlets: { popup: 'affectation-tache-new/'+ tache.id } }]" replaceUrl="true"
+            class="btn btn-primary" style="background-color: #6c7ae0;
+    border: 2px solid;
+    color: white;">
+        <span class="fa fa-plus" style="color: black"></span>&nbsp;Ajouter affectation
+    </button>
+
+    <br>
+    <br>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info" style="background-color: #6c7ae0;
+    border: 2px solid;
+    color: white;">
+        <span class="fa fa-arrow-left" style="color: black"></span>&nbsp;Back
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary" style="background-color: #6c7ae0;
+    border: 2px solid;
+    color: white;">
+        <span class="fa fa-pencil" style="color: black"></span>&nbsp;Edit
+    </button>
+</div>

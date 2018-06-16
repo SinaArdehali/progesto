@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "org.ocdm",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "4.8.1",
+    "baseName": "progesto",
+    "packageName": "org.ocdm",
+    "packageFolder": "org/ocdm",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "enableSwaggerCodegen": false,
+    "rememberMeKey": "d92fc0f53ad2779f04e5af1b7e7d2cd6343ec6f1",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "yarn",
+    "applicationType": "monolith",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": [
+      "fr"
+    ]
+  }
+}

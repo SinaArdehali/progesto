@@ -1,0 +1,318 @@
+<!--<form name="editForm" role="form" novalidate (ngSubmit)="selectPuisUpdateNbJoursAffecter(idValue, editForm)" #editForm="ngForm">-->
+    <div class="modal-open modal-lg modal-body custom-height-modal" >
+        <!--dd-->
+        <!--{{idValue}}-->
+        <!--<input type="hidden" value="{{idValue}}" name="idValue">-->
+        <!--est ce que la ligne cid essus est problematique-->
+        <jhi-alert-error></jhi-alert-error>
+
+
+        <div class="container">
+            <div class="row">
+                <h2>
+                    Affectation</h2>
+
+                <div class="col-md-12">
+                    <!--<div class="alert alert-purple alert-dismissable">-->
+                        <!--<span class="glyphicon glyphicon-certificate"></span>-->
+                        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">-->
+                            <!--×</button><strong>Well done!</strong> Custom <a href="http://www.jquery2dotnet.com"-->
+                                                                            <!--target="_blank">alert</a> message box with cool color</div>-->
+                    <div class="alert alert-info-alt alert-dismissable">
+                        <!--<span class="glyphicon glyphicon-certificate"></span>-->
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                            ×</button>Il reste <strong>{{nombreMaxJours}} jours </strong>à attribuer pour cette tâche.<br>Vous ne pouvez donc pas attribuer plus de <strong>{{nombreMaxJours}} jours </strong>!
+
+                    </div>
+                    <!--<div class="alert alert-danger-alt alert-dismissable">-->
+                        <!--<span class="glyphicon glyphicon-certificate"></span>-->
+                        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">-->
+                            <!--×</button><strong>Well done!</strong> Custom <a href="http://www.jquery2dotnet.com"-->
+                                                                            <!--target="_blank">alert</a> message box with cool color</div>-->
+                    <!--<div class="alert alert-warning-alt alert-dismissable">-->
+                        <!--<span class="glyphicon glyphicon-certificate"></span>-->
+                        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">-->
+                            <!--×</button><strong>Well done!</strong> Custom <a href="http://www.jquery2dotnet.com"-->
+                                                                            <!--target="_blank">alert</a> message box with cool color</div>-->
+                    <!--<div class="alert alert-success-alt alert-dismissable">-->
+                        <!--<span class="glyphicon glyphicon-certificate"></span>-->
+                        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">-->
+                            <!--×</button><strong>Well done!</strong> Custom <a href="http://www.jquery2dotnet.com"-->
+                                                                            <!--target="_blank">alert</a> message box with cool color</div>-->
+                </div>
+            </div>
+        </div>
+
+        <!--<input type="text" size="45" style="color: #3c763d; background-color: #dff0d8; border-color: #d0e9c6;" class="bg-primary" value="Il reste {{nombreMaxJours}} jours à attribuer pour cette tâche. Vous ne pouvez donc pas en attribuer plus de {{nombreMaxJours}} jours!">-->
+
+
+        <!--j'ai du changer le contenu du *ngIf ci dessous. j'ai mis tache a la place de taches-->
+        <!--<div class="color-box">-->
+            <!--<div class="shadow">-->
+                <!--<div title="Warning" class="info-tab warning-icon">&nbsp;</div>-->
+                <!--<div class="warning-box">-->
+                    <!--<p><strong>Warning:</strong>Think twice before using this class, because it uses the styles <br /><code>color:&thinsp;transparent</code> and <code>font-size:&thinsp;0px</code> to hide the text. Search engines consider such techniques as spam that may result in penalty.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="table-responsive" *ngIf="employesAvecMs" >
+            <table class="table table-striped">
+                <thead>
+                <tr height="" style="background-color: #187299; color: white;">
+                    <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
+                    <th class="center" width="200px">Login</th>
+                    <th class="center largeurCol">Nb jours dispo<br>M</th>
+                    <!--<th><span jhiTranslate="progestoApp.tache.nomTache">Nom de l'ingénieur</span></th>-->
+                    <!--<th><span jhiTranslate="progestoApp.tache.descriptionTache">Prénom de l'ingénieur</span></th>-->
+                    <th class="center largeurCol">Nb jours dispo<br>M + 1</th>
+                    <th class="center largeurCol">Nb jours dispo<br>M + 2</th>
+                    <!--<th><span jhiTranslate="progestoApp.tache.joursVendusTache">Jours Vendus Tache</span></th>-->
+                    <!--<th><span jhiTranslate="progestoApp.tache.projetMere">Projet Mere</span></th>-->
+
+                    <th width="290px">Entrez le nombre de jours à affecter</th>
+
+
+                    <!--<th></th>-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let employesAvecM of employesAvecMs ;trackBy: trackId" class="colorationLigne">
+
+                    <!--<td><a [routerLink]="['../tache', tache.id ]">{{participant.id}}</a></td>-->
+                    <!--<td><input type="text" [(ngModel)]="employesAvecM.id" name="idinge"></td>-->
+
+
+                    <!--<td><input type="text" class="form-control" name="{{employesAvecM.userLogin}}idinge" id="idinge"-->
+                               <!--[(ngModel)]="employesAvecM.id"/></td>-->
+
+
+                    <!--<td><textarea  [(ngModel)]="employesAvecM.id" name="{{employesAvecM.id}}id" readonly></td>-->
+                    <td width="200px"><input type="text" name="{{employesAvecM.userLogin}}userLogin" value="{{employesAvecM.userLogin}}"  class="center" readonly></td>
+                    <!--<td><textarea  [(ngModel)]="employesAvecM.userLogin" name="{{employesAvecM.userLogin}}userLogin" readonly></td>-->
+                    <!--<td>{{tache.descriptionTache}}</td>-->
+                    <!--<td>{{tache.debutTache | date:'mediumDate'}}</td>-->
+                    <!--<td>{{tache.finTache | date:'mediumDate'}}</td>-->
+                    <!--les champs ci dessous devront etre recupere via des api. il ne s'agira pas de champs angular-->
+                    <!--<td><input readonly value="{{nombreDeJoursAttribuesVar}}"></td>-->
+                    <td class="largeurCol"><input type="text" [(ngModel)]="employesAvecM.countM" name="{{employesAvecM.id}}compteM"  class="center" readonly></td>
+                    <td class="largeurCol"><input type="text" [(ngModel)]="employesAvecM.countMplus1" name="{{employesAvecM.id}}compteMplus1"  class="center" readonly></td>
+                    <td class="largeurCol"><input type="text" [(ngModel)]="employesAvecM.countMplus2" name="{{employesAvecM.id}}compteMplus2"  class="center" readonly></td>
+                    <!--<td>-->
+                    <!--<div *ngIf="tache.projetMere">-->
+                    <!--<a [routerLink]="['../projet', tache.projetMere?.id ]" >{{tache.projetMere?.nomProjet}}</a>-->
+                    <!--</div>-->
+                    <!--</td>-->
+
+                    <!--ci dessous, je fais appel a un eventuel component-->
+                    <!--<td>-->
+                    <!--<button-collapse-component [personnesNonAffectees]="personnesNonAffectees"></button-collapse-component>-->
+                    <!--</td>-->
+
+
+                    <!--ic dessous, on voit l'anvien bouton que j'ai supprime , pour l'inserer dans mon nouveau componnet: button-collapse-component-->
+                    <td  width="290px">
+
+                        <!--1ere methode que j'ai choisi de mettre en place. ci dessous , je mets dans le ngModel un champ de mon employesAvecM qui est de type User.ici j'ai choisi password-->
+                        <!--<form name="editForm2" role="form" novalidate (ngSubmit)="selectPuisUpdateNbJoursAffecter(idValue, editForm2)" #editForm2="ngForm">
+                            <input class="form-control" name="nombreDeJoursAaffecter" id="nombreDeJoursAaffecter" [(ngModel)]="employesAvecM.password">
+                        <input type="hidden" class="form-control" name="idinge2" id="idinge2"
+                               [(ngModel)]="employesAvecM.id"/>
+                        <button type="submit" class="btn btn-outline-success" ngdesabled="">Affecter</button>
+                        </form>-->
+
+
+                        <!--methode quej'ai choisi de mettre en place avec Ayoub:-->
+                        <div class="container-fluid">
+                        <div class="row">
+                            <input lang="en" class="form-control montrerChamp" type="number" min="0" step="0.25" name="nombreDeJoursAaffecter[]" [(ngModel)]="employesAvecM.nbJour">
+                            <span>&emsp;</span>
+                            <button type="button" class="btn btn-outline-success" (click)="selectPuisUpdateNbJoursAffecter(idValue, employesAvecM.id, employesAvecM.nbJour)">Affecter</button>
+                        </div>
+                        </div>
+                    </td>
+
+                    <!--<input id="button" type="button" value="Click"><br>-->
+                    <!--<div id="fn" hidden>First Name : <input type="text" /></div><br>-->
+                    <!--<div id="ln" hidden>Last Name : <input type="text" /></div>-->
+
+                    <!--<div class="row">-->
+                    <!--<button role="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">-->
+                    <!--horizontal collapse-->
+                    <!--</button>-->
+                    <!--<div id="demo" class="collapse show width">-->
+                    <!--<div style="width:400px;">-->
+                    <!--<p>Works smoother when element has defined width. Egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+                    <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                    <!--ci dessus, j'ai enlenve la partie [routerLink]="['../tacheAffectation', tacheParProjet.id ]" du boutton car ca ne correspond pas a ce que je desire-->
+                    <!--<td class="text-right">-->
+                    <!--<div class="btn-group flex-btn-group-container">-->
+                    <!--<button type="submit"-->
+                    <!--[routerLink]="['../tache', tache.id ]"-->
+                    <!--class="btn btn-info btn-sm">-->
+                    <!--<span class="fa fa-eye"></span>-->
+                    <!--<span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>-->
+                    <!--</button>-->
+                    <!--<button type="submit"-->
+                    <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/edit'} }]"-->
+                    <!--replaceUrl="true"-->
+                    <!--class="btn btn-primary btn-sm">-->
+                    <!--<span class="fa fa-pencil"></span>-->
+                    <!--<span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>-->
+                    <!--</button>-->
+                    <!--<button type="submit"-->
+                    <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/delete'} }]"-->
+                    <!--replaceUrl="true"-->
+                    <!--class="btn btn-danger btn-sm">-->
+                    <!--<span class="fa fa-remove"></span>-->
+                    <!--<span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>-->
+                    <!--</button>-->
+                    <!--</div>-->
+                    <!--</td>-->
+                </tr>
+
+                <tr *ngFor="let getAllIngeNoAttrib of getAllIngeNoAttribs ;let i of index" class="colorationLigne">
+                    <td  width="200px" class="center">{{getAllIngeNoAttrib}}</td>
+                    <td class="largeurCol center">26</td>
+                    <td class="largeurCol center">30</td>
+                    <td class="largeurCol center">31</td>
+                    <!--<td><input  value="TOTAL DISPO" readonly></td>-->
+                    <td width="290px">
+
+                        <!--1ere methode que j'ai choisi de mettre en place. ci dessous , je mets dans le ngModel un champ de mon employesAvecM qui est de type User.ici j'ai choisi password-->
+                        <!--<form name="editForm2" role="form" novalidate (ngSubmit)="selectPuisUpdateNbJoursAffecter(idValue, editForm2)" #editForm2="ngForm">
+                            <input class="form-control" name="nombreDeJoursAaffecter" id="nombreDeJoursAaffecter" [(ngModel)]="employesAvecM.password">
+                        <input type="hidden" class="form-control" name="idinge2" id="idinge2"
+                               [(ngModel)]="employesAvecM.id"/>
+                        <button type="submit" class="btn btn-outline-success" ngdesabled="">Affecter</button>
+                        </form>-->
+
+
+                        <!--methode quej'ai choisi de mettre en place avec Ayoub:-->
+                        <!--ATTENTION, IL ME FAUDRA ABSOLUMENT REMETTRE CECI EN PLACE. JE LE SUPPRIME POUR LE MOMENT CAR employesAvecM.nbJour N'EST PAS DEFINI JUSQUA CE SCOPE-->
+                        <!--<input class="form-control" name="nombreDeJoursAaffecter[]" [(ngModel)]="employesAvecM.nbJour">-->
+                        <!--<button type="button" class="btn btn-outline-success" (click)="selectPuisUpdateNbJoursAffecter(idValue, employesAvecM.id, employesAvecM.nbJour)">Affecter</button>-->
+                        <div class="container-fluid">
+                        <div class="row">
+                            <input class="form-control montrerChamp" type="number" min="0" name="nombreDeJoursAaffecter[]" #variableJour lang="en">
+                            <span>&emsp;</span><!-- ="{{getAllIngeNoAttrib}} -->
+                            <button type="button" class="btn btn-outline-success" (click)="selectPuisUpdateNbJoursIngeSansAffec(idValue, getAllIngeNoAttrib,  variableJour.value)">
+                                Affecter
+                            </button>
+                        </div>
+                            </div>
+                    </td>
+                </tr>
+
+
+                <!--<tr *ngFor="let listeAttribTache of listeAttribTaches ;trackBy: trackId">-->
+                    <!--<td>{{listeAttribTache.id}}</td>-->
+                    <!--<td>{{listeAttribTache.tacheMere.id}}</td>-->
+
+                <!--</tr>-->
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+                <span class="fa fa-ban"></span>&nbsp;<span>Fermer</span>
+            </button>
+            <!--<button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">-->
+            <!--<span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>-->
+            <!--</button>-->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--ci dessous, on peut trouver le code qui etait la a la base-->
+
+    <!--
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+        <div class="modal-header">
+            <h4 class="modal-title" id="myTacheLabel" jhiTranslate="progestoApp.attributionTache.nouvelleAttributionTache.title">Ajouter une nouvelle affectation pour cette tâche</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    (click)="clear()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <jhi-alert-error></jhi-alert-error>
+            <div class="form-group" [hidden]="!tache.id">
+                <label for="id" jhiTranslate="global.field.id">ID</label>
+                <input type="text" class="form-control" id="id" name="id"
+                       [(ngModel)]="tache.id" readonly />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="progestoApp.tache.nomTache" for="field_nomTache">Nom Tache</label>
+                <input type="text" class="form-control" name="nomTache" id="field_nomTache"
+                       [(ngModel)]="tache.nomTache"  />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="progestoApp.tache.descriptionTache" for="field_descriptionTache">Description Tache</label>
+                <input type="text" class="form-control" name="descriptionTache" id="field_descriptionTache"
+                       [(ngModel)]="tache.descriptionTache"  />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="progestoApp.tache.debutTache" for="field_debutTache">Debut Tache</label>
+                <div class="input-group">
+                    <input id="field_debutTache" type="text" class="form-control" name="debutTache" ngbDatepicker  #debutTacheDp="ngbDatepicker" [(ngModel)]="tache.debutTache"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" (click)="debutTacheDp.toggle()"><i class="fa fa-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="progestoApp.tache.finTache" for="field_finTache">Fin Tache</label>
+                <div class="input-group">
+                    <input id="field_finTache" type="text" class="form-control" name="finTache" ngbDatepicker  #finTacheDp="ngbDatepicker" [(ngModel)]="tache.finTache"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" (click)="finTacheDp.toggle()"><i class="fa fa-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="progestoApp.tache.nbQuartJourAttribuer" for="field_nbQuartJourAttribuer">Nb Quart Jour Attribuer</label>
+                <input type="number" class="form-control" name="nbQuartJourAttribuer" id="field_nbQuartJourAttribuer"
+                       [(ngModel)]="tache.nbQuartJourAttribuer"  />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="progestoApp.tache.joursVendusTache" for="field_joursVendusTache">Jours Vendus Tache</label>
+                <input type="number" class="form-control" name="joursVendusTache" id="field_joursVendusTache"
+                       [(ngModel)]="tache.joursVendusTache"  />
+            </div>
+
+            <div class="form-group">
+                <label class="form-control-label" jhiTranslate="progestoApp.tache.projetMere" for="field_projetMere">Projet Mere</label>
+                <select class="form-control" id="field_projetMere" name="projetMere" [(ngModel)]="tache.projetMere" >
+                    <option [ngValue]="null"></option>
+                    <option [ngValue]="projetOption.id === tache.projetMere?.id ? tache.projetMere : projetOption" *ngFor="let projetOption of projets; trackBy: trackProjetById">{{projetOption.nomProjet}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+                <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+            </button>
+            <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+            </button>
+        </div>
+    </form>
+    -->
+
+<!--</form>-->

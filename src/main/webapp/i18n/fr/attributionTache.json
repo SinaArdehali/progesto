@@ -1,0 +1,29 @@
+{
+    "progestoApp": {
+        "attributionTache" : {
+            "home": {
+                "title": "Attribuer une tâche à un Ingénieur",
+                "createLabel": "Attribuer une tâche à un Ingénieur",
+                "createOrEditLabel": "Créer ou éditer une tâche pour un Ingénieur"
+            },
+            "created": "Un nouveau Attribution Tache a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Attribution Tache avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Attribution Tache avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Attribution Tache {{ id }} ?"
+            },
+            "detail": {
+                "title": "Attribution Tache"
+            },
+            "date": "Date",
+            "quartJournee": "Quart De Journee De La Date",
+            "proprietaireTache": "A Qui Voulez Vous Les Attribuer",
+            "tacheMere": "Quelle tâche voulez-vous lui attribuer?",
+            "combienJoursAttribuer": "Combien de jours voulez-vous attribuer à cet ingénieur?",
+            "nouvelleAttributionTache": {
+                "title": "Ajouter une nouvelle attribution à cette tâche"
+
+            }
+        }
+    }
+}

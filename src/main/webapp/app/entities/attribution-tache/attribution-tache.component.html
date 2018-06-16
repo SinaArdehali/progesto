@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="progestoApp.attributionTache.home.title">Attribution Taches</span>
+        <button class="btn btn-primary float-right jh-create-entity create-attribution-tache" [routerLink]="['/', { outlets: { popup: ['attribution-tache-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="progestoApp.attributionTache.home.createLabel">
+            Create new Attribution Tache
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="attributionTaches">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="progestoApp.attributionTache.date">Date</span></th>
+            <th><span jhiTranslate="progestoApp.attributionTache.quartJournee">Quart Journee</span></th>
+            <th><span jhiTranslate="progestoApp.attributionTache.proprietaireTache">Proprietaire Tache</span></th>
+            <th><span jhiTranslate="progestoApp.attributionTache.tacheMere">Tache Mere</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let attributionTache of attributionTaches ;trackBy: trackId">
+                <td><a [routerLink]="['../attribution-tache', attributionTache.id ]">{{attributionTache.id}}</a></td>
+                <td>{{attributionTache.date | date:'mediumDate'}}</td>
+                <td>{{attributionTache.quartJournee}}</td>
+                <td>
+                    {{attributionTache.proprietaireTache?.login}}
+                </td>
+                <td>
+                    <div *ngIf="attributionTache.tacheMere">
+                        <a [routerLink]="['../tache', attributionTache.tacheMere?.id ]" >{{attributionTache.tacheMere?.nomTache}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../attribution-tache', attributionTache.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'attribution-tache/'+ attributionTache.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'attribution-tache/'+ attributionTache.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

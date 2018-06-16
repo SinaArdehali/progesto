@@ -1,0 +1,239 @@
+*{
+    background-color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+}
+
+
+td:first-child {
+    max-width: 250px;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+}
+
+
+/*table tr, table tr td:nth-last-child(1) {*/
+/*display: block !important;*/
+/*clear: both;*/
+/*}*/
+/*!*table tr, table tr td {*!*/
+/*!*clear: both;*!*/
+/*!*}*!*/
+
+.ajustementTable{
+    max-width: 10px;
+}
+
+input {
+    width: 175px;
+}
+
+
+/*#avantVente{*/
+/*background-color: #B6FFB5;*/
+/*}*/
+
+/*#realisation{*/
+/*background-color: #FFEFD3;*/
+/*}*/
+
+/*#retard{*/
+/*background-color: #FFDCDC;*/
+/*}*/
+
+/*#resteAttribuer{*/
+/*background-color: #FCFFC9;*/
+/*}*/
+
+
+
+
+/*j'avais mis le b loc suivant pour centrer mes input field dans le tableau de projet component'*/
+.center {
+    text-align: center;
+    /*vertical-align: middle;*/
+}
+/*td, th {*/
+/*padding: 5px;*/
+/*}*/
+/*tr {*/
+/*height: 25px;*/
+/*}*/
+
+
+table, th, td {
+    /*border:solid 1px;*/
+    /*border-collapse:collapse;*/
+    /*table-layout:fixed;*/
+}
+
+#monTableau th:last-child{
+    min-width: 380px;
+    max-width: 381px;
+}
+
+
+
+/*!*brouillon: *!*/
+/*table {*/
+/*width: 750px;*/
+/*border-collapse: collapse;*/
+/*margin:50px auto;*/
+/*}*/
+
+/*th {*/
+/*background: #3498db;*/
+/*color: white;*/
+/*font-weight: bold;*/
+/*}*/
+
+/*td, th {*/
+/*padding: 10px;*/
+/*border: 1px solid #ccc;*/
+/*text-align: left;*/
+/*font-size: 18px;*/
+/*}*/
+
+/*.labels tr td {*/
+/*background-color: #2cc16a;*/
+/*font-weight: bold;*/
+/*color: #fff;*/
+/*}*/
+
+.label tr td label {
+    display: block;
+}
+
+
+[data-toggle="toggle"] {
+    display: none;
+}
+
+
+.table-expand-main {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+.tableauAjusteProjet{
+    max-width: 250px;
+}
+
+.colorationLigne{
+    background-color: #D4F2F2;
+
+
+}
+
+.test2{
+    /*background-color: green;*/
+    display:none;
+}
+
+.fa{
+    font-size: 14px;
+}
+
+
+
+
+input
+{
+    background: transparent;
+    border: none;
+}
+
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+/*table {*/
+    /*border-collapse:separate;*/
+    /*border:solid black 1px;*/
+    /*border-radius:6px;*/
+    /*-moz-border-radius:6px;*/
+    /*border-top-left-radius: 6px;*/
+/*}*/
+
+/*td, th {*/
+    /*border-left:solid black 1px;*/
+    /*border-top:solid black 1px;*/
+/*}*/
+
+/*th {*/
+    /*background-color: blue;*/
+    /*border-top: none;*/
+/*}*/
+
+/*td:first-child, th:first-child {*/
+    /*border-left: none;*/
+/*}*/
+
+
+
+.bandeauGaucheTitre{
+    /*background-color: #353d47;*/
+    /*background:transparent;*/
+    opacity: 1;
+    /*width: 3em;*/
+    color: white;
+    font-weight: 900;
+
+    /*text-shadow: 3px 3px 0px #000;*/
+    position:absolute;
+    top:110px;
+    left:0px;
+    /*right: 140px;*/
+    width:1100px;
+    /*height:20px;*/
+    background-color:black;
+    /* z-index:0;*/
+    opacity:0.5;
+    /*
+     position:fixed;
+        top: 50%;
+        left: 50%;
+        width:30em;
+        height:18em;*/
+
+    /* position: absolute;
+      top: 50%;
+      left: 50%;
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);*/
+
+    height:1.5em;
+    /*display: flex;*/
+
+    align-items: center;
+    justify-content: center;
+
+    /*margin-top: 9px;*/
+    padding-top: 10px;
+    /*text-transform: uppercase;*/
+
+
+}

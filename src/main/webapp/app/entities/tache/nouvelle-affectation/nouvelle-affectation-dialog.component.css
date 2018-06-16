@@ -1,0 +1,416 @@
+.modal-open {
+    width: auto;
+    height: auto;
+    overflow: visible;
+
+}
+
+
+.center {
+    text-align: center;
+}
+
+
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+}
+
+
+/*input[type="number"]*/
+/*{*/
+    /*width: 200px;*/
+/*}*/
+
+/*.modal-dialog{
+    width:1000px;
+}*/
+
+/*.modal-body {
+    max-height: 1000px;
+}*/
+
+/*
+.custom-height-modal {
+    height: 1000px;
+}
+
+table {border-collapse: separate}
+
+*/
+
+
+/*
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 1000px;
+        margin: 30px auto;
+    }
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+    .modal-sm {
+        width: 1000px;
+    }
+    .modal-xy {  // custom
+    width: xxxpx;
+    }
+}*/
+/*@media (min-width: 992px) {
+    .modal-lg {
+        width: 1000px;
+    }
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ci dessous, ce qui avait etendu la fenetre, mais avait aussi affecter toutes les autres fenetres*/
+/*.modal-open {*/
+    /*overflow: hidden;*/
+    /*margin: 50px*/
+/*}*/
+
+/*.modal {*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*z-index: 1050;*/
+    /*display: none;*/
+    /*overflow: hidden;*/
+    /*outline: 0*/
+/*}*/
+
+/*.modal.fade .modal-dialog {*/
+    /*transition: -webkit-transform .3s ease-out;*/
+    /*transition: transform .3s ease-out;*/
+    /*transition: transform .3s ease-out, -webkit-transform .3s ease-out;*/
+    /*-webkit-transform: translate(0, -25%);*/
+    /*transform: translate(0, -25%)*/
+/*}*/
+
+/*.modal.show .modal-dialog {*/
+    /*-webkit-transform: translate(0, 0);*/
+    /*transform: translate(0, 0)*/
+/*}*/
+
+/*.modal-open .modal {*/
+    /*overflow-x: hidden;*/
+    /*overflow-y: auto*/
+/*}*/
+
+/*.modal-dialog {*/
+    /*position: relative;*/
+    /*width: auto;*/
+    /*margin: 10px*/
+/*}*/
+
+/*.modal-content {*/
+    /*position: relative;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-ms-flex-direction: column;*/
+    /*flex-direction: column;*/
+    /*background-color: #fff;*/
+    /*background-clip: padding-box;*/
+    /*border: 1px solid rgba(0, 0, 0, .2);*/
+    /*border-radius: .3rem;*/
+    /*outline: 0*/
+/*}*/
+
+/*.modal-backdrop {*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*z-index: 1040;*/
+    /*background-color: #000*/
+/*}*/
+
+/*.modal-backdrop.fade {*/
+    /*opacity: 0*/
+/*}*/
+
+/*.modal-backdrop.show {*/
+    /*opacity: .5*/
+/*}*/
+
+/*.modal-header {*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-ms-flex-align: center;*/
+    /*align-items: center;*/
+    /*-ms-flex-pack: justify;*/
+    /*justify-content: space-between;*/
+    /*padding: 15px;*/
+    /*border-bottom: 1px solid #e9ecef*/
+/*}*/
+
+/*.modal-title {*/
+    /*margin-bottom: 0;*/
+    /*line-height: 1.5*/
+/*}*/
+
+/*.modal-body {*/
+    /*position: relative;*/
+    /*-ms-flex: 1 1 auto;*/
+    /*flex: 1 1 auto;*/
+    /*padding: 15px*/
+/*}*/
+
+/*.modal-footer {*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-ms-flex-align: center;*/
+    /*align-items: center;*/
+    /*-ms-flex-pack: end;*/
+    /*justify-content: flex-end;*/
+    /*padding: 15px;*/
+    /*border-top: 1px solid #e9ecef*/
+/*}*/
+
+/*.modal-footer > :not(:first-child) {*/
+    /*margin-left: .25rem*/
+/*}*/
+
+/*.modal-footer > :not(:last-child) {*/
+    /*margin-right: .25rem*/
+/*}*/
+
+/*.modal-scrollbar-measure {*/
+    /*position: absolute;*/
+    /*top: -9999px;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*overflow: scroll*/
+/*}*/
+
+/*.modal-lg {*/
+    /*max-width: 200px*/
+/*}*/
+
+/*@media (min-width: 576px) {*/
+    /*.modal-dialog {*/
+        /*max-width: 1600px;*/
+        /*margin: 30px auto*/
+    /*}*/
+
+    /*.modal-sm {*/
+        /*max-width: 300px*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 992px) {*/
+    /*.modal-lg {*/
+        /*max-width: 2000px*/
+    /*}*/
+/*}*/
+
+
+/*body .modal-lg {*/
+    /*width: 2000px;*/
+/*}*/
+
+/*table {border-collapse: separate}*/
+
+.center {
+    text-align: center;
+}
+
+
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+}
+
+
+
+
+td:first-child {
+    max-width: 250px;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+}
+
+
+/*table tr, table tr td:nth-last-child(1) {*/
+/*display: block !important;*/
+/*clear: both;*/
+/*}*/
+/*!*table tr, table tr td {*!*/
+/*!*clear: both;*!*/
+/*!*}*!*/
+
+.ajustementTable{
+    max-width: 10px;
+}
+
+input {
+    width: 175px;
+}
+
+
+/*#avantVente{*/
+/*background-color: #B6FFB5;*/
+/*}*/
+
+/*#realisation{*/
+/*background-color: #FFEFD3;*/
+/*}*/
+
+/*#retard{*/
+/*background-color: #FFDCDC;*/
+/*}*/
+
+/*#resteAttribuer{*/
+/*background-color: #FCFFC9;*/
+/*}*/
+
+
+
+
+/*j'avais mis le b loc suivant pour centrer mes input field dans le tableau de projet component'*/
+.center {
+    text-align: center;
+    /*vertical-align: middle;*/
+}
+/*td, th {*/
+/*padding: 5px;*/
+/*}*/
+/*tr {*/
+/*height: 25px;*/
+/*}*/
+
+
+table, th, td {
+    border:solid 1px;
+    /*border-collapse:collapse;*/
+    /*table-layout:fixed;*/
+}
+
+#monTableau th:last-child{
+    min-width: 380px;
+    max-width: 381px;
+}
+
+
+
+/*!*brouillon: *!*/
+/*table {*/
+/*width: 750px;*/
+/*border-collapse: collapse;*/
+/*margin:50px auto;*/
+/*}*/
+
+/*th {*/
+/*background: #3498db;*/
+/*color: white;*/
+/*font-weight: bold;*/
+/*}*/
+
+/*td, th {*/
+/*padding: 10px;*/
+/*border: 1px solid #ccc;*/
+/*text-align: left;*/
+/*font-size: 18px;*/
+/*}*/
+
+/*.labels tr td {*/
+/*background-color: #2cc16a;*/
+/*font-weight: bold;*/
+/*color: #fff;*/
+/*}*/
+
+.label tr td label {
+    display: block;
+}
+
+
+[data-toggle="toggle"] {
+    display: none;
+}
+
+
+.table-expand-main {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+.tableauAjusteProjet{
+    max-width: 250px;
+}
+
+.colorationLigne{
+    background-color: #D4F2F2;
+
+
+}
+
+.test2{
+    /*background-color: green;*/
+    display:none;
+}
+
+.fa{
+    font-size: 14px;
+}
+
+
+
+
+input
+{
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+input.montrerChamp
+{
+    background: #d1d1d1;
+    width: 75px;
+}
+
+td.largeurCol{
+    width: 170px;
+}
+
+
+
+/*.color-box{margin-top:20px;padding-left:17px}*/
+/*.color-box p.extra{padding-top:5px}*/
+/*.color-box strong{font-size:16px;padding-right:5px;font-family:CuprumFFU,"Trebuchet MS",Arial,sans-serif}*/
+/*.color-box .shadow{margin:0;overflow:visible}*/
+/*.note-box,.warning-box,.tip-box{padding:0 15px 15px 25px}*/
+
+/*.info-tab{float:left;margin-left:-21px}*/
+
+.alert-purple { border-color: #694D9F;background: #694D9F;color: #fff; }
+.alert-info-alt { border-color: #B4E1E4;background: #81c7e1;color: #fff; }
+.alert-danger-alt { border-color: #B63E5A;background: #E26868;color: #fff; }
+.alert-warning-alt { border-color: #F3F3EB;background: #E9CEAC;color: #fff; }
+.alert-success-alt { border-color: #19B99A;background: #20A286;color: #fff; }
+.glyphicon { margin-right:10px; }
+.alert a {color: gold;}
+

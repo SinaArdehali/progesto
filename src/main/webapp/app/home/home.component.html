@@ -1,0 +1,104 @@
+<div class="row" style="background-color: inherit">
+    <div class="col-md-3">
+        <span class="hipster img-fluid img-rounded"></span>
+    </div>
+    <div>
+        <div class="container blocCentral">
+            <h1 class="display-4 texteFondBlanc" jhiTranslate="home.title">Welcome!</h1>
+            <br>
+            <p class="lead texteFondBlanc2" jhiTranslate="home.subtitle">This is your homepage</p>
+        </div>
+
+        <!--<div [ngSwitch]="isAuthenticated()" class="centrerBloc">-->
+            <!--<div class="alert alert-success" *ngSwitchCase="true">-->
+                <!--<span *ngIf="account" jhiTranslate="home.logged.message"-->
+                    <!--translateValues="{username: '{{account.login}}'}"> You are logged in as user "{{account.login}}". </span>-->
+            <!--</div>-->
+
+            <!--<div class="alert alert-warning" *ngSwitchCase="false">-->
+                <!--<span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>-->
+                <!--<a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign in</a><span jhiTranslate="global.messages.info.authenticated.suffix">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>-->
+            <!--</div>-->
+
+
+            <!--&lt;!&ndash;ciDessous page accueil moiSina&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="alert alert-warning" *ngSwitchCase="false">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign&ndash;&gt;-->
+                    <!--&lt;!&ndash;in</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span jhiTranslate="global.messages.info.authenticated.suffix">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User&ndash;&gt;-->
+                    <!--&lt;!&ndash;(login="user" and password="user").</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash; ci dessous, rajoute par moi ; alias bloc 1 &ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<div id='parent'>&ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash;<div id='child'>&ndash;&gt;&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div id='image' align="center">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div id="loginPic">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<img id='picture' alt='currentPic'&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                                 <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;src='https://yt3.ggpht.com/-LlGLF9j61zQ/AAAAAAAAAAI/AAAAAAAAAAA/QVlUIXAanlc/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash; Le bloc ci dessous permet d'afficher un petit bouton qui renvoie vers la fenetre modale de Logging &ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;&lt;!&ndash; <li *ngSwitchCase="false">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<a class="dropdown-item" (click)="login()" id="login">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                                <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                                <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<span jhiTranslate="global.menu.account.login">Me connecter</span>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</li> &ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<form id="loginForm" method="get">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<input type="text" id="username" class="login">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<input type="password" id="password" class="login">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<br>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                            <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<input type="submit" id="loginButton" class="loginSubmit">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</form>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash; jusque la rajoute par moi ; alias bloc 1 &ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+
+                <!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+
+                <!--&lt;!&ndash;&lt;!&ndash; <div class="alert alert-warning" *ngSwitchCase="false">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a class="alert-link" routerLink="register" jhiTranslate="global.messages.info.register.link">Register a new account</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div> &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash; fin cree par moi&ndash;&gt;&ndash;&gt;-->
+
+
+
+
+
+
+           <!--&lt;!&ndash;  <div class="alert alert-warning" *ngSwitchCase="false">-->
+                <!--<span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>-->
+                <!--<a class="alert-link" routerLink="register" jhiTranslate="global.messages.info.register.link">Register a new account</a>-->
+            <!--</div> &ndash;&gt;-->
+
+        <!--</div>-->
+
+       <!--  <p jhiTranslate="home.question">
+            If you have any question on JHipster:
+        </p>
+
+        <ul>
+            <li><a href="http://www.jhipster.tech/" target="_blank" rel="noopener" jhiTranslate="home.link.homepage">JHipster homepage</a></li>
+            <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener" jhiTranslate="home.link.stackoverflow">JHipster on Stack Overflow</a></li>
+            <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener" jhiTranslate="home.link.bugtracker">JHipster bug tracker</a></li>
+            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.link.chat">JHipster public chat room</a></li>
+            <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener" jhiTranslate="home.link.follow">follow @java_hipster on Twitter</a></li>
+        </ul>
+
+        <p>
+            <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.github">GitHub</a>!
+        </p> -->
+    </div>
+</div>

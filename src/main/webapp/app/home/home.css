@@ -1,0 +1,270 @@
+/* ==========================================================================
+Main page styles
+========================================================================== */
+
+/*ci dessous home cree par moiSina*/
+/* ********a partir de ce qu'il y a en dessous, cela a ete rajoute par moi**********/
+
+
+@font-face {
+   font-family: 'OpenSans-ExtraBold';
+   font-style: normal;
+   font-weight: 400;
+   src: local('OpenSans-ExtraBold.ttf'), url("../../content/font/OpenSans-ExtraBold.ttf") format('truetype');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Montserrat-Light.ttf'), url("../../content/font/montserrat/Montserrat-Light.ttf") format('truetype');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+
+
+.pageHome #content {
+  /*background: url("../../content/images/shutterstock_388099057.jpg") no-repeat center center fixed;*/
+  /*background:red;!important*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+
+.centrerBloc{
+/*position:absolute;
+    top:20px;
+    left:140px;
+    width:400px;
+    height:100px;
+    height:8em;
+       align-items: center;
+        justify-content: center;
+        padding-top: 2px;*/
+         justify-content: center;
+        /* padding-left:50px;*/
+         padding-right: 300px;
+}
+
+
+
+html {
+    height: 100%;
+    width: 100%;
+    /*background-color: #131B25;*/
+    /*background:rgba(0,0,0,0);*/
+    overflow: hidden;
+    text-align: center;
+    color: white;
+
+
+
+
+}
+
+h1 {
+/*    font-family: "Playfair Display";*/
+font-family: "Montserrat";
+    font-size: 45px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+}
+
+#parent{
+    height: 100%;
+}
+#child{
+    display: table;
+    margin: 0 auto;
+    font-size: 55px;
+}
+
+#picture
+{
+    height: 200px;
+    width: 200px;
+    display: table;
+    margin: 0 auto;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+//background-color: white;
+}
+
+#loginForm input
+{
+    color: #fc5e05;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    height: 39px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color:#233143;
+    border: none;
+    letter-spacing: 2px;
+
+
+}
+
+#loginForm input.loginSubmit
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 4px 45px -10px black;
+
+}
+
+#loginForm input:focus
+{
+    outline:0;
+}
+
+#loginPic :hover
+{
+    box-shadow: 0px 0px 40px -2px wheat;
+    transition: all 2s ease-in-out;
+}
+
+#loginForm input:hover, #loginForm input:focus
+{
+    box-shadow: 0px 4px 45px -10px black;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    outline:0;
+    transition: all .5s;
+}
+
+
+/* **********tout ce qui est au dessus a ete rajoute par moi meme*******/
+
+/*ci dessus, fin home cree par moiSina*/
+
+
+
+/*.hipster {*/
+    /*display: inline-block;*/
+    /*width: 347px;*/
+    /*height: 497px;*/
+    /*background: url("../../content/images/hipster.png") no-repeat center top;*/
+    /*background-size: contain;*/
+/*}*/
+
+/* wait autoprefixer update to allow simple generation of high pixel density media query */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    .hipster {
+        background: url("../../content/images/hipster2x.png") no-repeat center top;
+        background-size: contain;
+    }
+}
+
+
+.texteFondBlanc{
+    color: white;
+    font-family: "Montserrat";
+    font-size: 45px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    font-weight: 800;
+    line-height: 26.4px;
+    text-align: center;
+    letter-spacing: 0.225em;
+    /*border-top:    1px solid  #ff0;
+    border-right:  2px dashed #f0F;
+    border-left:   5px solid  #09f;
+    border-bottom-width : thick;
+    border-bottom-width : 12px;
+                               border-bottom-width : 1em;
+                               border-bottom-length : 1em;*/
+}
+
+.texteFondBlanc2{
+    color: white;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    /*font-weight: 500;*/
+    line-height: 26.4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.blocCentral{
+/*background-color: #353d47;*/
+    /*background:transparent;*/
+    /*opacity: 1;*/
+    /*width: 3em;*/
+
+
+text-shadow: 3px 3px 0px #000;
+position:absolute;
+
+    width:400px;
+    height:100px;
+    height:8em;
+    background-color:black;
+
+    /*top:600px;*/
+    /*left:140px;*/
+    /*right: 140px;*/
+
+    top:50%;
+    left:140px;
+    right: 140px;
+
+   /* z-index:0;*/
+    opacity:0.5;
+    /*
+     position:fixed;
+        top: 50%;
+        left: 50%;
+        width:30em;
+        height:18em;*/
+
+  /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);*/
+
+    /*display: flex;*/
+
+       align-items: center;
+        justify-content: center;
+
+        /*margin-top: 9px;*/
+        padding-top: 10px;
+
+
+
+}
+
+
+
+.pageHome2 {
+    /*background: url("../../content/images/shutterstock_388099057.jpg") no-repeat center center fixed;*/
+    background-color:red;
+-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+

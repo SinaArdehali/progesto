@@ -1,0 +1,163 @@
+/* ==========================================================================
+Navbar
+========================================================================== */
+@font-face {
+   font-family: 'OpenSans-ExtraBold';
+   font-style: normal;
+   font-weight: 400;
+   src: local('OpenSans-ExtraBold.ttf'), url("../../../content/font/OpenSans-ExtraBold.ttf") format('truetype');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Montserrat-Light.ttf'), url("../../../content/font/montserrat/Montserrat-Light.ttf") format('truetype');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+*{
+    /*z-index: 1000000;*/
+}
+
+
+.navbar-version {
+    font-size: 10px;
+    /*color: #ccc*/
+}
+
+.jh-navbar {
+    /*background-color: #353d47;*/
+    background: rgba(0, 0, 0, 0.4);
+    /*opacity: 0.6;*/
+    padding: .2em 1em;
+}
+
+/*.backgroundBlanc{*/
+    /*background:white;*/
+    /*opacity:1;*/
+/*}*/
+
+.jh-navbar .profile-image {
+    margin: -10px 0px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.jh-navbar .dropdown-item.active, .jh-navbar .dropdown-item.active:focus, .jh-navbar .dropdown-item.active:hover {
+    background-color: #353d47;
+}
+
+.jh-navbar .dropdown-toggle::after {
+    margin-left: 0.15em;
+}
+
+.jh-navbar ul.navbar-nav {
+    padding: 0.5em;
+}
+
+.jh-navbar .navbar-nav .nav-item {
+    margin-left: 1.5rem;
+}
+
+.jh-navbar a.nav-link {
+    font-weight: 400;
+}
+
+.jh-navbar .jh-navbar-toggler {
+    /*color: #ccc;*/
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.jh-navbar .jh-navbar-toggler:hover {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .jh-navbar-toggler {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .jh-logo-container {
+        width: 100%;
+    }
+}
+
+.navbar-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.navbar-brand.logo {
+    padding: 5px 15px;
+}
+
+.logo .logo-img {
+    height: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+}
+
+.logo-img {
+    height: 100%;
+    background: url("../../../content/images/logo-jhipster.png") no-repeat center center;
+    background-size: contain;
+    width: 100%;
+}
+
+
+
+
+
+/*cre par moi*/
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Montserrat";
+/*text-transform:uppercase;*/
+
+
+/*color: rgba(0, 35, 122, 0.5);*/
+
+  font-size: 1em;
+  text-decoration: none;
+  display: block;
+  font-color: white;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+
+
+/*color: rgba(0, 35, 122, 0.7);*/
+
+  /*color: black;*/
+  text-font: 2em;
+}
+
+
+
+
+.navbarBandeau{
+/*background-color: #353d47;*/
+    background:transparent;
+    opacity: 0.9;
+    /*color: grey;*/
+  font-family: "Open Sans";
+    }

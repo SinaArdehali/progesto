@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "proprietaireTache",
+            "otherEntityName": "user",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tacheMere",
+            "otherEntityName": "tache",
+            "otherEntityField": "nomTache"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "quartJournee",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180116152010",
+    "entityTableName": "attribution_tache",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

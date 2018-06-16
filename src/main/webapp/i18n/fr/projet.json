@@ -1,0 +1,31 @@
+{
+    "progestoApp": {
+        "projet" : {
+            "home": {
+                "title": "Projets",
+                "createLabel": "Créer un nouveau Projet",
+                "createOrEditLabel": "Créer ou éditer un Projet"
+            },
+            "created": "Un nouveau Projet a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Projet avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Projet avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Projet {{ id }} ?"
+            },
+            "detail": {
+                "title": "Projet"
+            },
+            "nomProjet": "Nom Projet",
+            "descriptionProjet": "Description Projet",
+            "debutProjet": "Debut Projet",
+            "finProjet": "Fin Projet",
+            "joursVendusProjet": "Nombre de jours<br>vendus",
+            "joursAttribuesProjet":"Nombre de jours<br>attribués",
+            "joursRestantAttribuerProjet": "Nombre de jours<br>restant à attribuer",
+            "joursConsommesProjet": "Nombre de<br>jours consommés",
+            "tacheEnfant": "Tache Enfant",
+            "membresProjet": "Membres Projet",
+            "chefDuProjet": "Chef Du Projet"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<script src="../projet.model.ts"></script>
+<div class="row">
+    <div class="col-md-4">
+        <input *ngIf="config.filtering" placeholder="Filter all columns"
+               [ngTableFiltering]="config.filtering"
+               class="form-control"
+               (tableChanged)="onChangeTable(config)"/>
+    </div>
+</div>
+<br>
+<ng-table [config]="config"
+          (tableChanged)="onChangeTable(config)"
+          (cellClicked)="onCellClick($event)"
+          (scrolledDown)="onScrollDown()"
+          (expanderClicked)="expanderClicked($event)"
+          (valueEdit)="editRow($event)"
+          [rows]="rows" [columns]="columns"
+          [expandable]="true"
+          [expandedComponent]="rowComponent"
+          [rowInputs]="rowInputs">
+</ng-table>
+
+<!--
+ce quil y avait avant:
+[config]="config"
+(tableChanged)="onChangeTable(config)"
+(cellClicked)="onCellClick($event)"
+(scrolledDown)="onScrollDown()"
+(expanderClicked)="expanderClicked($event)"
+[rowExpandContent]="rowExpandContent"
+[showExpandedRow]="showExpandedRow"
+[expandedRowIndex]="expandedRowIndex"
+[rows]="rows" [columns]="columns">
+-->

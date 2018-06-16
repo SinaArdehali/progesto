@@ -1,0 +1,274 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <h1>Bootstrap Grid Demo</h1>
+            <div>
+                <!--<form [formGroup]='dateForm' class='flex-container flex-center'>-->
+                <!--<input type="text" name='dateFrom' formControlName='dateFrom' placeholder='From Date'>-->
+                <!--<div class="width-5"></div>-->
+                <!--<input type="text" placeholder='To Date' name='dateTo' formControlName='dateTo'>-->
+                <!--<div class="width-5"></div>-->
+                <!--<button class='primary' (click)='reserve()'>Reserve</button>-->
+                <!--</form>-->
+            </div>
+            <div *ngIf='isReserved' class='reserved'>
+                {{isReserved}}
+            </div>
+            <div class="height-20px"></div>
+            <div class=' flex-container flex-center-horz'>
+                <div class='fa fa-chevron-left ' (click)='previousMonth() ' style="display:inline-block"></div>
+
+                <div style="display:inline-block">{{date.format('MMMM ')}} {{date.format('YYYY ')}}</div>
+
+                <div class='fa fa-chevron-right ' (click)='nextMonth() '></div>
+            </div>
+            <div class='flex-container'>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">L</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">M</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">M</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">J</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">V</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">S</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">D</div>
+            </div>
+            <div class='flex-container flex-wrap '>
+                <div *ngFor="let day of daysArr" style="display:inline-block">
+                    <div class='calendar-days flex-container flex-center' (click)='selectedDate(day)' [ngClass]="{'inactive ': !day, 'selected': isSelected(day), 'today': todayCheck(day)}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        {{day?.date()}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 other">
+            <h1>2 Columns</h1>
+            <div id='external-events'>
+                <div id='external-events-listing'>
+                    <h4>Panier de tâches</h4>
+                    <div class='fc-event' ondrop="drop(event)" ondragover="allowDrop(event)" >
+                        Projet: MyCleverIO; Lot:lot 3; Tache: Pré-vente
+                        <p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>
+                    </div>
+                    <div class='fc-event'>Projet: MyCleverIO; Lot:lot 3; Tache: Spécifications</div>
+                    <div class='fc-event'>Projet: MyCleverECM; Lot:lot 1; Tache: Spécifications</div>
+                    <div class='fc-event'>Projet: MyCleverECM; Lot:lot 1; Tache: IHM</div>
+                    <div class='fc-event'>Projet: TOP; Lot:lot 3; Tache: Refonte bdd</div>
+
+                    <!--<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">-->
+                    <!--<p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>-->
+                    <!--</div>-->
+
+                    <!--<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>-->
+
+
+                    <p id="demo"></p>
+
+
+                </div>
+                <p>
+                    <input type='checkbox' id='drop-remove' checked='checked' />
+                    <label for='drop-remove'>remove after drop</label>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!--1eme meth-->
+
+<div  class="row">
+    <div class="col-md-5">
+
+        <!--<div class="col-md-2">-->
+        <!--</div>-->
+
+        <div id='calendar-container' class='flex-container flex-column'>
+            <div>
+                <!--<form [formGroup]='dateForm' class='flex-container flex-center'>-->
+                <!--<input type="text" name='dateFrom' formControlName='dateFrom' placeholder='From Date'>-->
+                <!--<div class="width-5"></div>-->
+                <!--<input type="text" placeholder='To Date' name='dateTo' formControlName='dateTo'>-->
+                <!--<div class="width-5"></div>-->
+                <!--<button class='primary' (click)='reserve()'>Reserve</button>-->
+                <!--</form>-->
+            </div>
+            <!--<div *ngIf='isReserved' class='reserved'>-->
+                <!--{{isReserved}}-->
+            <!--</div>-->
+            <!--<div class="height-20px"></div>-->
+
+            <div class='flex-container' class="column" style="background-color:#bbb;">
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">L</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">M</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">M</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">J</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">V</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">S</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">D</div>
+            </div>
+            <div class='flex-container flex-wrap '>
+                <div *ngFor="let day of daysArr" style="display:inline-block">
+                    <div class='calendar-days flex-container flex-center' (click)='selectedDate(day)' [ngClass]="{'inactive ': !day, 'selected': isSelected(day), 'today': todayCheck(day)}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        {{day?.date()}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngFor="let day of daysArr" class="column flex-container" style="background-color:#bbb;" class='calendar-days flex-container flex-center' style="display:inline-block">
+
+                <h2>Ma date</h2>
+                <p>Drag and Drop</p>
+
+        </div>
+    </div>
+</div>
+
+
+<!--2eme meth-->
+
+
+
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <td class="field-label col-xs-3 active">
+            <label>Field 1:</label>
+        </td>
+        <td class="col-md-9">
+            Value 1
+        </td>
+    </tr>
+    <tr>
+        <td class="field-label col-xs-3 active">
+            <label>Field 2:</label>
+        </td>
+        <td class="col-md-9">
+            Value 2
+        </td>
+    </tr>
+    <tr>
+        <td class="field-label col-xs-3 active">
+            <label>Field 3:</label>
+        </td>
+        <td class="col-md-9">
+            Value 3
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+<!--3eme meth-->
+
+
+<div class="modal-body row">
+<div class="col-md-12 col-lg-8">
+    <div class='flex-container flex-center'>
+        <div id='calendar-container' class='flex-container flex-column'>
+            <div>
+                <!--<form [formGroup]='dateForm' class='flex-container flex-center'>-->
+                    <!--<input type="text" name='dateFrom' formControlName='dateFrom' placeholder='From Date'>-->
+                    <!--<div class="width-5"></div>-->
+                    <!--<input type="text" placeholder='To Date' name='dateTo' formControlName='dateTo'>-->
+                    <!--<div class="width-5"></div>-->
+                    <!--<button class='primary' (click)='reserve()'>Reserve</button>-->
+                <!--</form>-->
+            </div>
+            <div *ngIf='isReserved' class='reserved'>
+                {{isReserved}}
+            </div>
+            <div class="height-20px"></div>
+            <div class=' flex-container flex-center-horz'>
+                <div class='fa fa-chevron-left ' (click)='previousMonth() ' style="display:inline-block"></div>
+
+                <div style="display:inline-block">{{date.format('MMMM ')}} {{date.format('YYYY ')}}</div>
+
+                <div class='fa fa-chevron-right ' (click)='nextMonth() '></div>
+            </div>
+            <div class='flex-container'>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">L</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">M</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">M</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">J</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">V</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">S</div>
+                <div class='calendar-days flex-container flex-center' style="display:inline-block">D</div>
+            </div>
+            <div class='flex-container flex-wrap '>
+                <div *ngFor="let day of daysArr" style="display:inline-block">
+                    <div class='calendar-days flex-container flex-center' (click)='selectedDate(day)' [ngClass]="{'inactive ': !day, 'selected': isSelected(day), 'today': todayCheck(day)}" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        {{day?.date()}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-12">
+
+    <!--Panier de tâches-->
+    <div id='external-events'>
+        <div id='external-events-listing'>
+            <h4>Panier de tâches</h4>
+            <div class='fc-event' ondrop="drop(event)" ondragover="allowDrop(event)" >
+                Projet: MyCleverIO; Lot:lot 3; Tache: Pré-vente
+                <p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>
+            </div>
+            <div class='fc-event'>Projet: MyCleverIO; Lot:lot 3; Tache: Spécifications</div>
+            <div class='fc-event'>Projet: MyCleverECM; Lot:lot 1; Tache: Spécifications</div>
+            <div class='fc-event'>Projet: MyCleverECM; Lot:lot 1; Tache: IHM</div>
+            <div class='fc-event'>Projet: TOP; Lot:lot 3; Tache: Refonte bdd</div>
+
+            <!--<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">-->
+                <!--<p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>-->
+            <!--</div>-->
+
+            <!--<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>-->
+
+
+            <p id="demo"></p>
+
+
+        </div>
+        <p>
+            <input type='checkbox' id='drop-remove' checked='checked' />
+            <label for='drop-remove'>remove after drop</label>
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <!--Panier de tâches annexes-->
+    <div id='external-events'>
+        <div id='external-events-listing'>
+            <h4>Panier de tâches annexes</h4>
+            <div class='fc-event' draggable=true >Congés</div>
+            <div class='fc-event'>Formation</div>
+            <div class='fc-event'>Présentation</div>
+            <!--ci dessous, si je remplace dragtarget2 par dragtarget , alros j'obtiendrai une tache qui ne senlevera pas du panier-->
+            <div class='fc-event'  *ngFor="let tachesCurrentUser of tachesCurrentUsers ;trackBy: trackId"  ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget2"> Tache:{{tachesCurrentUser.nomTache}} - Projet: {{tachesCurrentUser.projetMere.nomProjet}}</div>
+            <!--<div>{{}}</div>-->
+            <!--<input [(ngModel)]="tachesCurrentUser.nomTache">-->
+        </div>
+        <p>
+            <input type='checkbox' id='drop-remove' checked='checked' />
+            <label for='drop-remove'>remove after drop</label>
+        </p>
+    </div>
+
+</div>
+</div>

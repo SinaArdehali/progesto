@@ -1,0 +1,59 @@
+OBJET:
+EmplMDTO signifie DTO Employe Avec Mois M
+description: signifie  un objet qui contient l'identite d'un Employes avec le nombre de jour dispo dans le Mois en cours
+
+EmplMM1M2DTO  signifie DTO Employe Avec Mois M, M+1 et M+2
+description: signifie  un objet qui contient l'identite d'un Employes avec le nombre de jour dispo dans le Mois en cours, le mois M+1 et le mois M+2
+
+
+METHODE:
+
+dans fichier AttributionTacheRepository:
+
+getNbJoursAttrib: il s'agit de recuperer le nombre de jours attribués. cette methode prend en entrée l'id de l'ingé et l'id de la tache.
+
+getFirstNRows: permet de récuperer les n premiers enregistrements de la table attribution_tache
+
+nbJoursDispM : permet de récuperer le nombre de jours dispo d'un Ingé pendant le mois en cours.
+
+nbJoursDispM1 : permet de récuperer le nombre de jours dispo d'un Ingé pendant le mois suivant,
+
+nbJoursDispM2 : permet de récuperer le nombre de jours dispo d'un Ingé pendant le mois M+2.
+
+getAttrTacheLimit: cette methode permet de recuperer les n premiers enregistrements sans attribution (cad sans proprietaire_tache) dans la table attribution_tache
+et correspondant à une tache donné.
+
+setDateAttrib: permet de faire un update de la colonne Date dans attribution_tache, pour une tache donné, un ingé donné, et lorsque la date est deja null
+
+getMaxJours: permet de recuperer le nombre d'enregistremtns de la table attribution_tache , qui n'ont pas de tache mere et pas d'inge affecté
+
+dans fichier ProjetRepository:
+majJoursVendProj: mise a jour des jours vendus du projet a partir de la somme des jours vendus des taches constituants ce projet
+
+dans fichier TacheRepository:
+getAllByProjId: recuperer toutes les taches a partir de l'id d'un projet
+
+getJoursAttrByTache : on recupere le nombre d'attribution tache qui ont deja été attribues à un inge et pour un projet donné
+
+getJoursNonAttrByTache : on recupere le nombre d'attribution tache qui n'ont pas été attribues à un inge et pour un projet donné
+
+dans fichier UserRepository:
+getParticByTache: recupere le nombre de participants qui ont été affectés sur une certaine tache.
+
+getAllInge : on recupere tous les ingenieurs, cdp et dp
+getAllIngeM : on recupere tous les inge ainsi que leurs dispo à M
+getAllIngeM1 : on recupere tous les inge ainsi que leurs dispo à M+1
+getAllIngeM2 : on recupere tous les inge ainsi que leurs dispo à M+2
+
+
+getAllIngeNoAttrib: ici recupere tous les ingénieurs qui ne sont pas dasn la table Attribution Tache
+
+getIdFromLogin: voici une methode simple qui me retourne l'id d'un User en fonction de son login
+
+VARIABLE:
+
+
+
+methodes que je n'ai pas encore changé les noms car j'ai peur d'affecter le code:
+queryPersonnesNonAffectees
+

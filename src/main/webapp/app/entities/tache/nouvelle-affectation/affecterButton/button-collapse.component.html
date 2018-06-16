@@ -1,0 +1,15 @@
+<!--<script src="projet-collapse.component.ts"></script>-->
+
+    &emsp;&emsp;&emsp;
+    <button type="button" class="btn btn-info glyphicon glyphicon-eye-open" data-toggle="collapse" [attr.data-target]="'#demo' + personnesNonAffectees.id" (click)="tacheByProjet(personnesNonAffectees)"> Attribuer
+    </button>
+
+
+    <div id="demo{{personnesNonAffectees.id}}" class="collapse show width">
+        <div style="width:50px;">
+        <input [(ngModel)]="personnesNonAffectees.id" readonly>
+
+            </div>
+
+    </div>
+

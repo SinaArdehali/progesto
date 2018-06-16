@@ -1,0 +1,38 @@
+// JDL definition for application 'GreatBigExampleApplication' generated with command 'jhipster export-jdl'
+
+
+entity Employe (employe) {
+	estCeUnChefDeProjet Boolean
+}
+
+entity Projet (projet) {
+  nomProjet String,
+  descriptionProjet String,
+  debutProjet LocalDate,
+  finProjet LocalDate
+}
+entity Tache (tache) {
+  nomTache String,
+  descriptionTache String,
+  debutTache LocalDate,
+  finTache LocalDate
+}
+entity DemiJournee (demi_journee) {
+  matin Boolean
+}
+
+
+relationship OneToOne {
+  Employe{nomCorrespondantDansLdap(login)} to User
+}
+relationship OneToMany {
+  Projet{projetMereDeChaqueTache} to Tache{tacheParProjet(nomProjet)},
+  Tache{demiJourneePourChaqueTache} to DemiJournee{tacheMereDeLaDemiJournee(nomTache)}
+}
+relationship ManyToOne {
+  Projet{quiEstLeChefDeProjet(login)} to Employe,
+  DemiJournee{aQuiAppartientCetteDemiJournee(login)} to Employe
+}
+relationship ManyToMany {
+  Projet{ingenieursParticipantsAuProjet(login)} to Employe{surQuelProjetEstIlInscrit}
+}

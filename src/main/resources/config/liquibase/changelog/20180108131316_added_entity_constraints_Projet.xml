@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Projet.
+    -->
+    <changeSet id="20180108131316-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="projets_id"
+                                 baseTableName="projet_membres_projet"
+                                 constraintName="fk_projet_membres_projet_projets_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="projet"/>
+        <addForeignKeyConstraint baseColumnNames="membres_projets_id"
+                                 baseTableName="projet_membres_projet"
+                                 constraintName="fk_projet_membres_projet_membres_projets_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+        
+        <addForeignKeyConstraint baseColumnNames="projets_id"
+                                 baseTableName="projet_chef_du_projet"
+                                 constraintName="fk_projet_chef_du_projet_projets_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="projet"/>
+        <addForeignKeyConstraint baseColumnNames="chef_du_projets_id"
+                                 baseTableName="projet_chef_du_projet"
+                                 constraintName="fk_projet_chef_du_projet_chef_du_projets_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,46 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEmployeLabel" jhiTranslate="progestoApp.employe.home.createOrEditLabel">Create or edit a Employe</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.employe.loginDansLeLdap" for="field_loginDansLeLdap">Login Dans Le Ldap</label>
+            <select class="form-control" id="field_loginDansLeLdap" name="loginDansLeLdap" [(ngModel)]="employe.loginDansLeLdap" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id === employe.loginDansLeLdap?.id ? employe.loginDansLeLdap : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>
+            </select>
+        </div>
+
+        <div class="form-group" [hidden]="!employe.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="employe.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.employe.login" for="field_login">Login</label>
+            <input type="text" class="form-control" name="login" id="field_login"
+                [(ngModel)]="employe.login" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.employe.chefDeProjet" for="field_chefDeProjet">Chef De Projet</label>
+            <input type="checkbox" class="form-control" name="chefDeProjet" id="field_chefDeProjet"
+                [(ngModel)]="employe.chefDeProjet" />
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="2627.393480206273" y="2872.5">org.ocdm.service.impl.TacheServiceImpl</node>
+    <node x="1617.0" y="552.5">org.ocdm.domain.Authority_</node>
+    <node x="5155.526813539606" y="1256.5">org.ocdm.web.rest.errors.FieldErrorVM</node>
+    <node x="6401.0" y="5005.0">org.ocdm.security.SpringSecurityAuditorAware</node>
+    <node x="2339.0" y="3662.0">org.ocdm.config.WebConfigurerTest.MockServletRegistration</node>
+    <node x="1336.593480206273" y="1194.5">org.ocdm.service.AttributionTacheService</node>
+    <node x="6653.0" y="5005.0">org.ocdm.config.ApplicationProperties</node>
+    <node x="4090.332369095162" y="1151.0">org.ocdm.domain.AttributionTache</node>
+    <node x="7528.584383424499" y="2036.5">org.ocdm.service.mapper.UserMapper</node>
+    <node x="9145.803686365318" y="2099.5">org.ocdm.web.rest.vm</node>
+    <node x="9496.236742424242" y="1247.0">org.ocdm.domain.PersistentToken_</node>
+    <node x="4957.0" y="3662.0">org.ocdm.config.MetricsConfiguration</node>
+    <node x="4077.9375" y="1961.5">org.ocdm.web.rest.TacheResource</node>
+    <node x="1879.0" y="5005.0">org.ocdm.config.DefaultProfileUtil</node>
+    <node x="258.9375" y="4552.0">org.ocdm.web.rest.AuditResourceIntTest</node>
+    <node x="1601.5" y="5005.0">org.ocdm.aop.logging</node>
+    <node x="13852.859389297182" y="3104.5">org.ocdm.web.rest.errors.ExceptionTranslatorTestController.TestResponseStatusException</node>
+    <node x="6754.145833333333" y="3010.0">org.ocdm.domain.Projet_</node>
+    <node x="0.0" y="1268.0">org.ocdm.service.ProjetService</node>
+    <node x="2117.25" y="4389.0">org.ocdm.config.WebConfigurerTest.MockFilterRegistration</node>
+    <node x="9927.486742424242" y="0.0">org.ocdm.domain.PersistentToken</node>
+    <node x="3002.0" y="3778.0">org.ocdm.config.WebConfigurerTestController</node>
+    <node x="5032.026813539606" y="2057.5">org.ocdm.web.rest.errors.ExceptionTranslator</node>
+    <node x="7487.66856060606" y="74.0">org.ocdm.domain.AbstractAuditingEntity</node>
+    <node x="9229.820075757576" y="2946.5">org.ocdm.web.rest.errors.ExceptionTranslatorIntTest</node>
+    <node x="9450.486742424242" y="384.0">org.ocdm.repository.UserRepository</node>
+    <node x="454.16666666666697" y="2789.0">org.ocdm.web.rest.ProjetResourceIntTest</node>
+    <node x="12477.035984848484" y="1962.5">org.ocdm.service.UserServiceIntTest</node>
+    <node x="5663.318480206273" y="1025.5">org.ocdm.domain.Projet</node>
+    <node x="8378.992722630515" y="1130.5">org.ocdm.service.dto.UserDTO</node>
+    <node x="4640.0" y="5005.0">org.ocdm.config.ThymeleafConfiguration</node>
+    <node x="10517.448762122895" y="2684.0">org.ocdm.web.rest.AccountResourceIntTest</node>
+    <node x="13480.535984848484" y="1172.5">org.ocdm.security.PersistentTokenRememberMeServices</node>
+    <node x="2021.0" y="1267.0">org.ocdm.security.DomainUserDetailsService</node>
+    <node x="6571.0" y="3662.0">org.ocdm.service.util.RandomUtil</node>
+    <node x="3494.6885500911662" y="1215.5">org.ocdm.service.TacheService</node>
+    <node x="2559.0" y="5005.0">org.ocdm.config.DatabaseConfiguration</node>
+    <node x="2263.3125" y="521.0">org.ocdm.domain.AbstractAuditingEntity_</node>
+    <node x="3436.0" y="5005.0">org.ocdm.security.SecurityUtilsUnitTest</node>
+    <node x="12802.137025571334" y="3051.5">org.ocdm.web.rest.LogsResourceIntTest</node>
+    <node x="4935.8125" y="3052.0">org.ocdm.domain.AttributionTacheAemploye_</node>
+    <node x="5536.0" y="3662.0">org.ocdm.web.rest.TestUtil</node>
+    <node x="10971.122166571591" y="1172.5">org.ocdm.service.MailService</node>
+    <node x="416.0" y="5005.0">org.ocdm.config.Constants</node>
+    <node x="5589.0" y="3847.0">org.ocdm.web.rest.TestUtil.ZonedDateTimeMatcher</node>
+    <node x="11779.695075757576" y="542.0">org.ocdm.repository.PersistentTokenRepository</node>
+    <node x="4866.0" y="5005.0">org.ocdm.ApplicationWebXml</node>
+    <node x="1017.0" y="5005.0">org.ocdm.ProgestoApp</node>
+    <node x="13173.535984848484" y="1246.0">org.ocdm.web.rest.errors.CustomParameterizedException</node>
+    <node x="10106.457853031985" y="962.0">org.ocdm.service.UserService</node>
+    <node x="1979.0000000000002" y="3671.5">org.ocdm.config.WebConfigurer</node>
+    <node x="6267.145833333333" y="3052.0">org.ocdm.domain.AttributionTache_</node>
+    <node x="3242.9375" y="1993.5">org.ocdm.service.dto.TacheEtDonneesDTOComplet</node>
+    <node x="738.0" y="5005.0">org.ocdm.security.AuthoritiesConstants</node>
+    <node x="5566.026813539606" y="1857.0">org.ocdm.domain.Tache</node>
+    <node x="4194.0" y="3662.0">org.ocdm.config.SecurityConfiguration</node>
+    <node x="1957.0" y="531.0">org.ocdm.security.UserNotActivatedException</node>
+    <node x="1410.2623106060605" y="3662.0">org.ocdm.domain.PersistentAuditEvent</node>
+    <node x="5728.0" y="5005.0">org.ocdm.config.DateTimeFormatConfiguration</node>
+    <node x="3326.0" y="3805.0">org.ocdm.web.rest.ProfileInfoResource</node>
+    <node x="12205.035984848484" y="2078.0">org.ocdm.web.rest.LogsResource</node>
+    <node x="10234.001055963849" y="478.0">org.ocdm.service.dto.EmplMM1M2DTO</node>
+    <node x="999.5" y="3866.0">org.ocdm.repository.CustomAuditEventRepository</node>
+    <node x="814.030980206273" y="1278.5">org.ocdm.repository.ProjetRepository</node>
+    <node x="106.01609848484838" y="3672.5">org.ocdm.config.audit.AuditEventConverter</node>
+    <node x="1419.5" y="3898.5">org.ocdm.domain.PersistentAuditEvent_</node>
+    <node x="7490.29356060606" y="373.0">org.ocdm.domain.User</node>
+    <node x="2249.75" y="4015.0">org.ocdm.config.WebConfigurerTest</node>
+    <node x="5934.0" y="3662.0">org.ocdm.web.rest.util.HeaderUtil</node>
+    <node x="74.21212121212113" y="4240.5">org.ocdm.web.rest.AuditResource</node>
+    <node x="315.5" y="1993.0">org.ocdm.web.rest.ProjetResource</node>
+    <node x="6071.0" y="5005.0">org.ocdm.domain.Employe_</node>
+    <node x="7340.401813539606" y="2621.0">org.ocdm.web.rest.UserResourceIntTest</node>
+    <node x="3278.0" y="3992.0">org.ocdm.web.rest.ProfileInfoResourceIntTest</node>
+    <node x="4381.0" y="5005.0">org.ocdm.config.CloudDatabaseConfiguration</node>
+    <node x="3747.5" y="3662.0">org.ocdm.config.LoggingConfiguration.LogbackLoggerContextListener</node>
+    <node x="10298.986742424242" y="1909.0">org.ocdm.web.rest.AccountResource</node>
+    <node x="13624.035984848484" y="499.0">org.ocdm.security.PersistentTokenRememberMeServices.UpgradedRememberMeToken</node>
+    <node x="1262.0" y="5005.0">org.ocdm.config.AsyncConfiguration</node>
+    <node x="2901.9375" y="2025.0">org.ocdm.service.dto.TacheEtDonneesDTO</node>
+    <node x="11363.122166571591" y="1931.0">org.ocdm.service.MailServiceIntTest</node>
+    <node x="5342.0" y="5005.0">org.ocdm.web.rest.util.PaginationUtilUnitTest</node>
+    <node x="3805.0" y="5005.0">org.ocdm.config.LocaleConfiguration</node>
+    <node x="13131.035984848484" y="2005.0">org.ocdm.web.rest.errors.ExceptionTranslatorTestController</node>
+    <node x="14097.859389297182" y="3094.0">org.ocdm.web.rest.errors.ExceptionTranslatorTestController.TestDTO</node>
+    <node x="2784.0" y="5005.0">org.ocdm.security.SecurityUtils</node>
+    <node x="11220.695075757576" y="563.0">org.ocdm.repository.AuthorityRepository</node>
+    <node x="2303.9375" y="1163.0">org.ocdm.domain.User_</node>
+    <node x="7200.66856060606" y="73.5">org.ocdm.domain.Authority</node>
+    <node x="2125.9375" y="1930.0">org.ocdm.web.rest.AttributionTacheResource</node>
+    <node x="3305.0" y="3662.0">org.ocdm.web.rest.ProfileInfoResource.ProfileInfoVM</node>
+    <node x="5482.8125" y="3010.0">org.ocdm.domain.Tache_</node>
+    <node x="690.0160984848484" y="3662.0">org.ocdm.repository.PersistenceAuditEventRepository</node>
+    <node x="1110.0" y="1994.5">org.ocdm.repository.AttributionTacheRepository</node>
+    <node x="6239.0" y="3662.0">org.ocdm.service.dto.ParticTacheDTO</node>
+    <node x="3716.9375" y="2047.0">org.ocdm.repository.TacheRepository</node>
+    <node x="1507.0" y="5084.0">org.ocdm.config.LoggingAspectConfiguration</node>
+    <node x="797.5" y="4115.0">org.ocdm.repository.CustomAuditEventRepositoryIntTest</node>
+    <node x="4141.0" y="5005.0">org.ocdm.web.rest.util.PaginationUtil</node>
+    <node x="1899.1875" y="2852.0">org.ocdm.web.rest.AttributionTacheResourceIntTest</node>
+    <node x="2239.0" y="5005.0">org.ocdm.service.dto.IngeSansAttribDTO</node>
+    <node x="4066.8125" y="2768.0">org.ocdm.web.rest.TacheResourceIntTest</node>
+    <node x="64.96212121212113" y="3887.0">org.ocdm.service.AuditEventService</node>
+    <node x="54.16666666666697" y="2956.5">org.ocdm.service.impl.AttributionTacheServiceImpl</node>
+    <node x="3657.0" y="3847.0">org.ocdm.config.LoggingConfiguration</node>
+    <node x="8653.803686365318" y="1909.0">org.ocdm.web.rest.UserResource</node>
+    <node x="3034.0" y="5005.0">org.ocdm.config.JacksonConfiguration</node>
+    <node x="55.5" y="2025.0">org.ocdm.service.impl.ProjetServiceImpl</node>
+    <node x="0.0" y="5005.0">org.ocdm.web.rest.errors.ErrorConstants</node>
+    <node x="10563.001055963849" y="499.0">org.ocdm.service.dto.EmplMDTO</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.ocdm.web.rest.ProjetResourceIntTest" target="org.ocdm.repository.ProjetRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Tache" target="org.ocdm.domain.Projet">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AuditResourceIntTest" target="org.ocdm.repository.PersistenceAuditEventRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.AttributionTache_" target="org.ocdm.domain.Tache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.PersistentAuditEvent_" target="org.ocdm.domain.PersistentAuditEvent">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TestUtil" target="org.ocdm.web.rest.TestUtil.ZonedDateTimeMatcher">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Tache_" target="org.ocdm.domain.AttributionTache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.LoggingConfiguration" target="org.ocdm.config.LoggingConfiguration.LogbackLoggerContextListener">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TacheResource" target="org.ocdm.service.TacheService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TacheResourceIntTest" target="org.ocdm.web.rest.errors.ExceptionTranslator">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.vm" target="org.ocdm.service.dto.UserDTO">
+      <point x="0.0" y="-14.5" />
+      <point x="9200.303686365318" y="1777.0" />
+      <point x="8688.392722630515" y="1777.0" />
+      <point x="88.39999999999998" y="194.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Authority_" target="org.ocdm.domain.Authority">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Projet" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.errors.ExceptionTranslatorTestController.TestDTO" target="org.ocdm.web.rest.errors.ExceptionTranslatorTestController">
+      <point x="0.0" y="-25.0" />
+      <point x="14157.859389297182" y="2581.0" />
+      <point x="13456.535984848484" y="2581.0" />
+      <point x="139.5" y="109.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.errors.ExceptionTranslatorTestController" target="org.ocdm.web.rest.errors.ExceptionTranslatorTestController.TestResponseStatusException">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResource" target="org.ocdm.repository.PersistentTokenRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TestUtil.ZonedDateTimeMatcher" target="org.ocdm.web.rest.TestUtil">
+      <point x="-61.75" y="-57.5" />
+      <point x="5650.75" y="3822.0" />
+      <point x="5624.25" y="3822.0" />
+      <point x="-88.25" y="67.5" />
+    </edge>
+    <edge source="org.ocdm.domain.AttributionTache_" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserService" target="org.ocdm.repository.PersistentTokenRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResource" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.security.DomainUserDetailsService" target="org.ocdm.security.UserNotActivatedException">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TacheResourceIntTest" target="org.ocdm.service.TacheService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.User" target="org.ocdm.domain.PersistentToken">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserServiceIntTest" target="org.ocdm.repository.PersistentTokenRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AuditResourceIntTest" target="org.ocdm.config.audit.AuditEventConverter">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.web.rest.AccountResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserService" target="org.ocdm.repository.AuthorityRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.security.PersistentTokenRememberMeServices" target="org.ocdm.repository.PersistentTokenRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.User_" target="org.ocdm.domain.AbstractAuditingEntity_">
+      <point x="-72.125" y="-161.5" />
+      <point x="0.0" y="56.5" />
+    </edge>
+    <edge source="org.ocdm.domain.User_" target="org.ocdm.domain.Authority">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AttributionTacheResource" target="org.ocdm.service.AttributionTacheService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.service.TacheService">
+      <point x="-36.30000000000018" y="-246.5" />
+      <point x="2954.093480206273" y="2471.0" />
+      <point x="3232.4375" y="2471.0" />
+      <point x="3232.4375" y="1767.0" />
+      <point x="3550.1885500911662" y="1767.0" />
+      <point x="-111.0" y="109.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserServiceIntTest" target="org.ocdm.service.UserService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.domain.Authority">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.repository.AuthorityRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.User_" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.web.rest.vm">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.domain.PersistentToken">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserServiceIntTest" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.ProjetServiceImpl" target="org.ocdm.service.ProjetService">
+      <point x="-60.0" y="-89.0" />
+      <point x="0.0" y="56.5" />
+    </edge>
+    <edge source="org.ocdm.service.UserServiceIntTest" target="org.ocdm.domain.PersistentToken">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AttributionTacheResourceIntTest" target="org.ocdm.domain.AttributionTache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.AttributionTacheServiceImpl" target="org.ocdm.service.AttributionTacheService">
+      <point x="-95.0" y="-162.5" />
+      <point x="149.16666666666697" y="2511.0" />
+      <point x="626.0" y="2511.0" />
+      <point x="626.0" y="1817.0" />
+      <point x="1420.760146872939" y="1817.0" />
+      <point x="-168.33333333333394" y="130.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Projet" target="org.ocdm.domain.Tache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.AttributionTacheServiceImpl" target="org.ocdm.repository.AttributionTacheRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AuditResourceIntTest" target="org.ocdm.domain.PersistentAuditEvent">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Projet_" target="org.ocdm.domain.Projet">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AttributionTacheResourceIntTest" target="org.ocdm.service.AttributionTacheService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TacheResourceIntTest" target="org.ocdm.web.rest.TacheResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.web.rest.errors.ExceptionTranslator">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.WebConfigurerTest.MockServletRegistration" target="org.ocdm.config.WebConfigurerTest">
+      <point x="160.75" y="151.5" />
+      <point x="2821.25" y="3985.0" />
+      <point x="2599.75" y="3985.0" />
+      <point x="100.0" y="-162.0" />
+    </edge>
+    <edge source="org.ocdm.service.MailServiceIntTest" target="org.ocdm.service.MailService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Tache_" target="org.ocdm.domain.Tache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.User" target="org.ocdm.domain.Authority">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.repository.CustomAuditEventRepositoryIntTest" target="org.ocdm.config.audit.AuditEventConverter">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.AuditEventService" target="org.ocdm.repository.PersistenceAuditEventRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AttributionTacheResourceIntTest" target="org.ocdm.web.rest.errors.ExceptionTranslator">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProjetResourceIntTest" target="org.ocdm.domain.Projet">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.LogsResourceIntTest" target="org.ocdm.web.rest.LogsResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.mapper.UserMapper" target="org.ocdm.domain.Authority">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.User_" target="org.ocdm.domain.PersistentToken">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserService" target="org.ocdm.service.dto.EmplMM1M2DTO">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.security.PersistentTokenRememberMeServices.UpgradedRememberMeToken" target="org.ocdm.security.PersistentTokenRememberMeServices">
+      <point x="95.66666666666606" y="78.5" />
+      <point x="13863.20265151515" y="942.0" />
+      <point x="13810.535984848484" y="942.0" />
+      <point x="150.0" y="-152.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserService" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.errors.ExceptionTranslator" target="org.ocdm.web.rest.errors.FieldErrorVM">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.service.dto.TacheEtDonneesDTOComplet">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AuditResourceIntTest" target="org.ocdm.service.AuditEventService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.repository.CustomAuditEventRepository" target="org.ocdm.config.audit.AuditEventConverter">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.security.PersistentTokenRememberMeServices" target="org.ocdm.security.PersistentTokenRememberMeServices.UpgradedRememberMeToken">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.repository.CustomAuditEventRepositoryIntTest" target="org.ocdm.repository.PersistenceAuditEventRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResource" target="org.ocdm.service.UserService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.mapper.UserMapper" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserService" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.LoggingConfiguration.LogbackLoggerContextListener" target="org.ocdm.config.LoggingConfiguration">
+      <point x="77.75" y="67.5" />
+      <point x="3980.75" y="3822.0" />
+      <point x="4026.0" y="3822.0" />
+      <point x="123.0" y="-141.5" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProfileInfoResourceIntTest" target="org.ocdm.web.rest.ProfileInfoResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProjetResource" target="org.ocdm.repository.ProjetRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Projet_" target="org.ocdm.domain.Tache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.repository.CustomAuditEventRepository" target="org.ocdm.repository.PersistenceAuditEventRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.service.dto.TacheEtDonneesDTO">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AttributionTacheResourceIntTest" target="org.ocdm.repository.AttributionTacheRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.errors.ExceptionTranslatorIntTest" target="org.ocdm.web.rest.errors.ExceptionTranslatorTestController">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.repository.CustomAuditEventRepository" target="org.ocdm.domain.PersistentAuditEvent">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.LoggingAspectConfiguration" target="org.ocdm.aop.logging">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.UserService" target="org.ocdm.service.dto.EmplMDTO">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.User" target="org.ocdm.domain.AbstractAuditingEntity">
+      <point x="-65.875" y="-204.5" />
+      <point x="66.75" y="67.5" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProjetResourceIntTest" target="org.ocdm.web.rest.errors.ExceptionTranslator">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AuditResourceIntTest" target="org.ocdm.web.rest.AuditResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.WebConfigurerTest" target="org.ocdm.config.WebConfigurer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.repository.TacheRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.repository.ProjetRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TacheResourceIntTest" target="org.ocdm.repository.TacheRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.domain.Authority">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResource" target="org.ocdm.service.dto.UserDTO">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.WebConfigurerTest" target="org.ocdm.config.WebConfigurerTest.MockServletRegistration">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProjetResourceIntTest" target="org.ocdm.service.ProjetService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.TacheResourceIntTest" target="org.ocdm.domain.Tache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AttributionTacheResourceIntTest" target="org.ocdm.web.rest.AttributionTacheResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.repository.CustomAuditEventRepositoryIntTest" target="org.ocdm.repository.CustomAuditEventRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.repository.CustomAuditEventRepositoryIntTest" target="org.ocdm.domain.PersistentAuditEvent">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.AttributionTacheAemploye_" target="org.ocdm.domain.Tache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.AbstractAuditingEntity_" target="org.ocdm.domain.AbstractAuditingEntity">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.MailServiceIntTest" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.web.rest.UserResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.AttributionTache_" target="org.ocdm.domain.AttributionTache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.service.UserService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.web.rest.vm">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.WebConfigurerTest" target="org.ocdm.config.WebConfigurerTestController">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResource" target="org.ocdm.service.UserService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.security.DomainUserDetailsService" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.errors.ExceptionTranslatorTestController.TestResponseStatusException" target="org.ocdm.web.rest.errors.ExceptionTranslatorTestController">
+      <point x="-56.25" y="-14.5" />
+      <point x="13909.109389297182" y="2601.0" />
+      <point x="13270.535984848484" y="2601.0" />
+      <point x="-46.5" y="109.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.service.MailService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProjetResourceIntTest" target="org.ocdm.web.rest.ProjetResource">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.mapper.UserMapper" target="org.ocdm.service.dto.UserDTO">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.security.PersistentTokenRememberMeServices" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.service.dto.UserDTO">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.AttributionTache" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.AuditEventService" target="org.ocdm.config.audit.AuditEventConverter">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.ProjetServiceImpl" target="org.ocdm.repository.ProjetRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResource" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResource" target="org.ocdm.service.MailService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.LogsResourceIntTest" target="org.ocdm.web.rest.vm">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Projet_" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.service.dto.UserDTO">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProfileInfoResource" target="org.ocdm.web.rest.ProfileInfoResource.ProfileInfoVM">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProfileInfoResource.ProfileInfoVM" target="org.ocdm.web.rest.ProfileInfoResource">
+      <point x="70.0" y="46.5" />
+      <point x="3515.0" y="3780.0" />
+      <point x="3504.5" y="3780.0" />
+      <point x="59.5" y="-68.5" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResource" target="org.ocdm.service.MailService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.repository.PersistentTokenRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Tache" target="org.ocdm.domain.AttributionTache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.service.UserService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.AttributionTache" target="org.ocdm.domain.Tache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.PersistentToken_" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.Tache_" target="org.ocdm.domain.Projet">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.errors.ExceptionTranslatorTestController" target="org.ocdm.web.rest.errors.CustomParameterizedException">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.WebConfigurerTest.MockFilterRegistration" target="org.ocdm.config.WebConfigurerTest">
+      <point x="-191.25" y="-130.5" />
+      <point x="2308.5" y="4364.0" />
+      <point x="2374.75" y="4364.0" />
+      <point x="-125.0" y="162.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AuditResource" target="org.ocdm.service.AuditEventService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.ProjetResource" target="org.ocdm.service.ProjetService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.repository.UserRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.service.mapper.UserMapper">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.errors.ExceptionTranslatorIntTest" target="org.ocdm.web.rest.errors.ExceptionTranslator">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.domain.AttributionTache">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.security.PersistentTokenRememberMeServices" target="org.ocdm.domain.PersistentToken">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.AccountResourceIntTest" target="org.ocdm.service.MailService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.config.WebConfigurerTest" target="org.ocdm.config.WebConfigurerTest.MockFilterRegistration">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.PersistentToken" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.domain.PersistentToken_" target="org.ocdm.domain.PersistentToken">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.web.rest.UserResourceIntTest" target="org.ocdm.domain.User">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.ocdm.service.impl.TacheServiceImpl" target="org.ocdm.repository.AttributionTacheRepository">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="281.33333333333337" y="1743.3333333333335" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

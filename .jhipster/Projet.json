@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "tacheEnfant",
+            "otherEntityName": "tache",
+            "otherEntityRelationshipName": "projetMere"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "membresProjet",
+            "otherEntityName": "user",
+            "otherEntityField": "login",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "chefDuProjet",
+            "otherEntityName": "user",
+            "otherEntityField": "login",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nomProjet",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descriptionProjet",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "debutProjet",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "finProjet",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "joursVendusProjet",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20180108131316",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "projet",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

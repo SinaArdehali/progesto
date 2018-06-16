@@ -1,0 +1,25 @@
+{
+    "progestoApp": {
+        "employe" : {
+            "home": {
+                "title": "Employes",
+                "createLabel": "Ajouter un ingénieur présent dans le LDAP",
+                "createOrEditLabel": "Créer ou éditer un Employe"
+            },
+            "created": "Un nouveau Employe a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Employe avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Employe avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Employe {{ id }} ?"
+            },
+            "detail": {
+                "title": "Employe"
+            },
+            "login": "Veuillez taper son login",
+            "chefDeProjet": "Cet employé est il (elle) un Chef De Projet?",
+            "loginDansLeLdap": "Sélectionnez cet ingénieur dans le LDAP",
+            "tachePerso": "Tache Perso",
+            "surQuelProjetEstIlInscrit": "Sur Quel Projet Est Il Inscrit"
+        }
+    }
+}

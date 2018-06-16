@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span jhiTranslate="progestoApp.tache.home.title">Taches</span>
+        <button class="btn btn-primary float-right jh-create-entity create-tache" [routerLink]="['/', { outlets: { popup: ['tache-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="progestoApp.tache.home.createLabel">
+            Create new Tache
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="taches">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="progestoApp.tache.nomTache">Nom Tache</span></th>
+            <th><span jhiTranslate="progestoApp.tache.descriptionTache">Description Tache</span></th>
+            <th><span jhiTranslate="progestoApp.tache.debutTache">Debut Tache</span></th>
+            <th><span jhiTranslate="progestoApp.tache.finTache">Fin Tache</span></th>
+            <th><span jhiTranslate="progestoApp.tache.nbQuartJourAttribuer">Nb Quart Jour Attribuer</span></th>
+            <th><span jhiTranslate="progestoApp.tache.joursVendusTache">Jours Vendus Tache</span></th>
+            <th><span jhiTranslate="progestoApp.tache.projetMere">Projet Mere</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let tache of taches ;trackBy: trackId">
+                <td><a [routerLink]="['../tache', tache.id ]">{{tache.id}}</a></td>
+                <td>{{tache.nomTache}}</td>
+                <td>{{tache.descriptionTache}}</td>
+                <td>{{tache.debutTache | date:'mediumDate'}}</td>
+                <td>{{tache.finTache | date:'mediumDate'}}</td>
+                <td>{{tache.nbQuartJourAttribuer}}</td>
+                <td>{{tache.joursVendusTache}}</td>
+                <td>
+                    <div *ngIf="tache.projetMere">
+                        <a [routerLink]="['../projet', tache.projetMere?.id ]" >{{tache.projetMere?.nomProjet}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../tache', tache.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tache/'+ tache.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

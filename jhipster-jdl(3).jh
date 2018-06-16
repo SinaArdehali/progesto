@@ -1,0 +1,48 @@
+// JDL definition for application 'progesto' generated with command 'jhipster export-jdl'
+entity Projet (projet) {
+  nomProjet String,
+  descriptionProjet String,
+  debutProjet LocalDate,
+  finProjet LocalDate,
+  joursVendusProjet Float
+}
+
+entity Lot (lot){
+nomLot String,
+descriptionLot String,
+debutLot LocalDate,
+dateLivraison LocalDate
+}
+
+entity Tache (tache) {
+  nomTache String,
+  descriptionTache String,
+  debutTache LocalDate,
+  finTache LocalDate,
+  nbQuartJourAttribuer Integer,
+  joursVendusTache Float
+}
+
+entity AttributionTache (attribution_tache) {
+  date LocalDate,
+  quartJournee Integer
+}
+
+relationship OneToMany {
+  //Projet{tacheEnfant} to Tache{projetMere(nomProjet)},
+  Projet{lotEnfant} to Lot{projetMere(nomProjet)},
+  Lot{tacheEnfant} to Tache{lotMere(nomLot)},
+  Tache{tacheEmploye} to AttributionTache{tacheMere(nomTache)}
+}
+relationship ManyToOne {
+  AttributionTache{proprietaireTache(login)} to User,
+  Projet{chefDuProjet(login)} to User
+}
+relationship ManyToMany {
+  Projet{membresProjet(login)} to User
+  //Projet{chefDuProjet(login)} to User
+}
+
+service Tache with serviceImpl
+service Projet with serviceImpl
+service AttributionTache with serviceImpl

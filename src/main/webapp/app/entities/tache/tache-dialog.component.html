@@ -1,0 +1,122 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myTacheLabel" jhiTranslate="progestoApp.tache.home.createOrEditLabel">Create or edit a Tache</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!tache.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="tache.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.tache.nomTache" for="field_nomTache">Nom Tache</label>
+            <input type="text" class="form-control" name="nomTache" id="field_nomTache"
+                [(ngModel)]="tache.nomTache" [readonly]="isReadOnly" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.tache.descriptionTache" for="field_descriptionTache">Description Tache</label>
+            <input type="text" class="form-control" name="descriptionTache" id="field_descriptionTache"
+                [(ngModel)]="tache.descriptionTache"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.tache.debutTache" for="field_debutTache">Debut Tache</label>
+            <div class="input-group">
+                <input id="field_debutTache" type="text" class="form-control" name="debutTache" ngbDatepicker  #debutTacheDp="ngbDatepicker" [(ngModel)]="tache.debutTache"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" (click)="debutTacheDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.tache.finTache" for="field_finTache">Fin Tache</label>
+            <div class="input-group">
+                <input id="field_finTache" type="text" class="form-control" name="finTache" ngbDatepicker  #finTacheDp="ngbDatepicker" [(ngModel)]="tache.finTache"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" (click)="finTacheDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <!--<div class="form-group">-->
+            <!--<label class="form-control-label" jhiTranslate="progestoApp.tache.nbQuartJourAttribuer" for="field_nbQuartJourAttribuer">Nb Quart Jour Attribuer</label>-->
+            <!--<input type="number" class="form-control" name="nbQuartJourAttribuer" id="field_nbQuartJourAttribuer"-->
+                <!--[(ngModel)]="tache.nbQuartJourAttribuer"  />-->
+        <!--</div>-->
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.tache.joursVendusTache" for="field_joursVendusTache">Jours Vendus Tache</label>
+            <input type="number" min="0" class="form-control" name="joursVendusTache" id="field_joursVendusTache"
+                [(ngModel)]="tache.joursVendusTache"  [readonly]="isReadOnly" required/>
+        </div>
+
+
+        <!--<div class="form-row">-->
+            <!--&lt;!&ndash;pouvoir modifier le nombre de jours vendus pour une tache:&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="button" class="btn btn-info" onclick="addInput()" value="Modifier jours vendus"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<span id="responce"></span>&ndash;&gt;-->
+            <!--<button type="button" class="btn btn-info" data-toggle="collapse" [attr.data-target]="'#demo2' + tache.id" (click)="modifierJoursVendus(tache)">-->
+                <!--<span class="d-none d-md-inline">Modifier jours vendus</span>-->
+            <!--</button>-->
+                <!--&nbsp;&nbsp;-->
+            <!--<span class="horizontal-collapse collapse" id="demo2{{tache.id}}">-->
+                <!--<input type="number" name="modifierJoursVendus" style="height:30px;"/>-->
+                <!--&nbsp;&nbsp;-->
+                <!--<button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">-->
+                    <!--<span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>-->
+                <!--</button>-->
+            <!--</span>-->
+        <!--</div>-->
+
+        <!--<br>-->
+
+        <div class="form-group" [ngClass]="{visibiliteBouton:!isReadOnly}">
+            <!--pouvoir modifier le nombre de jours vendus pour une tache:-->
+            <!--<input type="button" class="btn btn-info" onclick="addInput()" value="Modifier jours vendus"/>-->
+            <!--<span id="responce"></span>-->
+            <button type="button" class="btn btn-info" data-toggle="collapse" [attr.data-target]="'#demo2' + tache.id">
+                <span class="d-none d-md-inline">Modifier jours vendus</span>
+            </button>
+            &nbsp;&nbsp;
+            <br><br>
+            <span class="horizontal-collapse collapse" id="demo2{{tache.id}}">
+                <span class="form-row">
+                        <input type="number" min="0" name="modifierJoursVendus" style="height:30px; width: 300px" placeholder="Entrez le nombre de jours à ajouter" [(ngModel)]="tache.nbJour"/>
+                        &nbsp;&nbsp;
+                    <!--cid essous jai mis en ploace le routerLink et routerLInkActive ci dessous, mais il sagissait dune astuce pour rafraichir la page. je vais mettre ce de cote pour le moment.-->
+                        <button type="button" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary" (click)="modifierJoursVendus(tache.nbJour, true)" [routerLink]="['/projet']" routerLinkActive="active">
+                            <span class="fa fa-save"></span>&nbsp;<span>Ajouter jours</span>
+                        </button>
+                </span>
+                <br>
+                <span class="form-row">
+                        <input type="number" min="0" name="modifierJoursVendus" style="height:30px; width: 300px" placeholder="Entrez le nombre de jours à enlever" [(ngModel)]="tache.nbJour2"/>
+                        &nbsp;&nbsp;
+                        <button type="button" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary" (click)="modifierJoursVendus(tache.nbJour2, false)">
+                            <span class="fa fa-save"></span>&nbsp;<span>Retirer jours</span>
+                        </button>
+                </span>
+            </span>
+        </div>
+
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.tache.projetMere" for="field_projetMere">Projet Mere</label>
+            <select class="form-control" id="field_projetMere" name="projetMere" [(ngModel)]="tache.projetMere" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="projetOption.id === tache.projetMere?.id ? tache.projetMere : projetOption" *ngFor="let projetOption of projets; trackBy: trackProjetById">{{projetOption.nomProjet}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,39 @@
+
+<div *ngIf="attributionTache">
+    <h2><span jhiTranslate="progestoApp.attributionTache.detail.title">Attribution Tache</span> {{attributionTache.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="progestoApp.attributionTache.date">Date</span></dt>
+        <dd>
+            <span>{{attributionTache.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.attributionTache.quartJournee">Quart Journee</span></dt>
+        <dd>
+            <span>{{attributionTache.quartJournee}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.attributionTache.proprietaireTache">Proprietaire Tache</span></dt>
+        <dd>
+            {{attributionTache.proprietaireTache?.login}}
+        </dd>
+        <dt><span jhiTranslate="progestoApp.attributionTache.tacheMere">Tache Mere</span></dt>
+        <dd>
+            <div *ngIf="attributionTache.tacheMere">
+                <a [routerLink]="['/tache', attributionTache.tacheMere?.id]">{{attributionTache.tacheMere?.nomTache}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'attribution-tache/'+ attributionTache.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

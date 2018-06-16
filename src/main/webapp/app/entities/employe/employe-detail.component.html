@@ -1,0 +1,34 @@
+
+<div *ngIf="employe">
+    <h2><span jhiTranslate="progestoApp.employe.detail.title">Employe</span> {{employe.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="progestoApp.employe.login">Login</span></dt>
+        <dd>
+            <span>{{employe.login}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.employe.chefDeProjet">Chef De Projet</span></dt>
+        <dd>
+            <span>{{employe.chefDeProjet}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.employe.loginDansLeLdap">Login Dans Le Ldap</span></dt>
+        <dd>
+            {{employe.loginDansLeLdap?.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'employe/'+ employe.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

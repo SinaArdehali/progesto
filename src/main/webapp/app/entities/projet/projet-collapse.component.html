@@ -1,0 +1,189 @@
+<!--<script src="projet-collapse.component.ts"></script>-->
+<div class="container tableauAjusteProjet">
+    &emsp;&emsp;&emsp;
+    <div id="t1">INTERACTIVE TIMELINES</div>
+    <span style="font-weight: bold; font-size: 2em">{{projet.nomProjet}}</span>
+    <br>
+    &emsp;&emsp;&emsp;
+    <button type="button" class="btn btn-info glyphicon glyphicon-eye-open" data-toggle="collapse" [attr.data-target]="'#demo' + projet.id" (click)="tacheByProjet(projet)">
+        <span class="fa fa-eye"></span>
+        <span class="d-none d-md-inline">Voir tâches</span>
+    </button>
+
+    <!--<span style="font-weight: bold; font-size: 2em">{{projet.nomProjet}}</span>-->
+
+    <br>
+    <!--<button type="button" class="btn btn-info glyphicon glyphicon-eye-open" data-toggle="collapse" [attr.data-target]="'#demo' + projet.id" (click)="tacheByProjet(projet)"> Voir les tâches du projet-->
+    <!--</button>-->
+
+    <!--jai tenté avec les deux lignes ci dessous. ma div collapse s'est bien ouverte , mais on n'est pas entré dans la methode tacheByProjet de (click)-->
+    <!--<button type="button" class="btn btn-info" data-toggle="collapse" [attr.data-target]="'#demo' + projet.id">-->
+    <!--<span class="glyphicon glyphicon-plus" (click)="tacheByProjet(projet)">Voir les tâches du projet</button>-->
+    <!--peut etre que je devrais mettre le boutton ci dessus dans un td et dans un span, comme je l'ai fait pour le bouton affectation ci dessous-->
+    <div id="demo{{projet.id}}" class="collapse" *ngIf="projetSansTache(tacheParProjets)">
+        <br>
+        <p>Aucune tâche</p>
+
+        <br>
+            <button type="submit" class="btn btn-outline-info btn-sm" [routerLink]="['/', { outlets: { popup: ['tache-new'] } }]">
+                <span class="glyphicon glyphicon-plus">Ajouter tâche</span>
+            </button>
+    </div>
+    <br>
+    <div id="demo{{projet.id}}" class="collapse" *ngIf="!projetSansTache(tacheParProjets)">
+
+        <table class="table table-striped tableauAjusteProjetParTache" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+            <tr>
+                <th colspan="1"></th>
+                <th class="center" colspan="1">AVANT-VENTE</th>
+                <th class="center" colspan="4">REALISATION</th>
+                <th class="center" colspan="2">PLANIFICATION</th>
+                <th colspan="3"></th>
+            </tr>
+            <tr>
+                <th></th>
+
+                <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.nomProjet">Nom Projet</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.descriptionProjet">Description Projet</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.debutProjet">Debut Projet</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.finProjet">Fin Projet</span></th>-->
+                <th class="center"><span jhiTranslate="progestoApp.tache.joursVendusTache">Vendus</span></th>
+                <th class="center"><span jhiTranslate="progestoApp.tache.joursConsommeTache">Consommés</span></th>
+                <th class="center"><span jhiTranslate="progestoApp.tache.joursResteAfaire">Reste à faire</span></th>
+                <th class="center"><span jhiTranslate="progestoApp.tache.joursReel">Réel</span></th>
+                <th class="center"><span jhiTranslate="progestoApp.tache.joursRetardTache">Retard</span></th>
+                <th class="center"><span jhiTranslate="progestoApp.tache.joursAttribueTache">Attribués</span></th>
+                <th class="center"><span jhiTranslate="progestoApp.tache.joursResteAttribuerTache">Reste à attribuer</span></th>
+                <th></th>
+                <th></th>
+                <!--<th><span jhiTranslate="progestoApp.tache.finTache">Date de fin de tache</span></th>-->
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <!--<tr *ngFor="let tache of taches ;trackBy: trackId">-->
+            <!--pour change rla couleur de la ligne:  bgcolor="#A9A9A9"-->
+
+            <tr *ngFor="let tacheParProjet of tacheParProjets ;trackBy: trackId">
+
+                <!--<td><a [routerLink]="['../tache', tacheParProjet.id ]">{{tacheParProjet.id}}</a></td>-->
+                <!--<td>{{tacheParProjet.nomTache}}</td>-->
+                <td><span style="font-weight: bold; font-size: 1.5em;">{{tacheParProjet.nomTache}}</span></td>
+
+                <!--<td>{{tacheParProjet.descriptionTache}}</td>-->
+                <!--<td><input [(ngModel)]="tacheParProjet.finTache"></td>-->
+                <td id="avantVente"><input [(ngModel)]="tacheParProjet.joursVendusTache" readonly></td>
+                <!--<td>{{tacheParProjet.debutTache | date:'mediumDate'}}</td>-->
+                <td id="realisation"><input [(ngModel)]="tacheParProjet.joursConsommeTache" readonly></td>
+                <!--<td>{{tacheParProjet.finTache | date:'mediumDate'}}</td>-->
+                <td id="realisation"><input [(ngModel)]="tacheParProjet.joursResteAfaire" readonly></td>
+                <!--<td>{{tacheParProjet.joursVendusTache}}</td>-->
+                <td id="realisation"><input [(ngModel)]="tacheParProjet.joursReel" readonly></td>
+                <td id="retard"><input [(ngModel)]="tacheParProjet.joursRetardTache" readonly></td>
+                <td id="attribue"><input [(ngModel)]="tacheParProjet.joursAttribueTache" readonly></td>
+                <td id="resteAttribuer"><input [(ngModel)]="tacheParProjet.joursResteAttribuerTache" readonly></td>
+
+                <!--<td>-->
+                    <!--&lt;!&ndash;<div *ngIf="tache.aquelProjetAppartientCetteTache">&ndash;&gt;-->
+                    <!--&lt;!&ndash;ci dessus, la relation qui va de projet a tache&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a [routerLink]="['../projet', tache.aquelProjetAppartientCetteTache?.id ]">{{tache.aquelProjetAppartientCetteTache?.nomProjet}}</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</td>-->
+
+                <td>
+                    <button class="btn btn-outline-success fa fa-handshake-o" [routerLink]="['../tacheAffectation', tacheParProjet.id ]">
+                    <span>
+                        Affectations
+                    </span>
+                    </button>
+                </td>
+                <!--<td width="300"><span>{{tacheParProjet.finTache}}</span>-->
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../tache', tacheParProjet.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tache/'+ tacheParProjet.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tache/'+ tacheParProjet.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <!--ci dessous, ca fonctionne-->
+            <!--<tr>-->
+            <!--<td>-->
+            <!--<button type="submit" class="btn btn-outline-info btn-sm" [routerLink]="['/', { outlets: { popup: ['tache-new'] } }]">-->
+            <!--<span class="glyphicon glyphicon-plus">Ajouter une nouvelle tâche à ce projet</span>-->
+            <!--</button>-->
+            <!--</td>-->
+            <!--</tr>-->
+
+            <!--ci dessous, ca fonctionne-->
+            <!--[routerLink]="['/', { outlets: { popup: 'projet/'+ projet.id + '/delete'} }]"-->
+            <!--[routerLink]="['/', { outlets: { popup: 'projet/'+ projet.id + '/edit'} }]"-->
+            <!--<button type="submit" class="btn btn-outline-info btn-sm" [routerLink]="['/', { outlets: { popup: ['tache-new'] } }]">-->
+            <!--[routerLink]="['/', { outlets: { popup: 'projet/'+ projet.id + '/edit'} }]"-->
+
+            <!--ci dessous , j'ai tente de creer un boutton pour creer une nouvelle tache pour un certain projet-->
+            <!--
+                    <tr>
+                    <td>
+                    <button type="submit" replaceUrl="true" class="btn btn-outline-info btn-sm" [routerLink]="['/', { outlets: { popup: 'tache-new/' + projet.id } }]">
+                    <span class="glyphicon glyphicon-plus">Ajouter une nouvelle tâche à ce projet</span>
+                    </button>
+                    </td>
+                    </tr>-->
+
+            <!--// JE N'AI PLUS BESOIN DE CE BOUT DE CODE CAR LE BLOC CI DESSOUS CORRESPOND A LA LIGNE TOTAL QUE J'AI INSERE ET QUI SE DEPLOYAIT QUAND ON CLIQUAIT SUR "VOIR LES TACHES DU PROJET"-->
+            <!--&lt;!&ndash;bouton qui renvoie juste vers le creation projet. ca fonctionne&ndash;&gt;-->
+            <!--<tr>-->
+                <!--<td><span style="font-weight: bold; font-size: 1.5em;">TOTAL:</span></td>-->
+                <!--<td><input readonly></td>-->
+                <!--<td><input readonly>{{sumJoursVendus}}</td>-->
+                <!--<td><input readonly></td>-->
+                <!--<td><input readonly></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-outline-info btn-sm fa fa-plus" [routerLink]="['/', { outlets: { popup: 'tache-new/'+ projet.id} }]">
+                        <span class="glyphicon glyphicon-plus">Ajouter tâche</span>
+                    </button>
+                </td>
+            </tr>
+            <!--avant il y avait:-->
+            <!--[routerLink]="['/', { outlets: { popup: ['tache-new'] } }]"-->
+
+            <!--pour le button edit:-->
+            <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tacheParProjet.id + '/edit'} }]"-->
+
+            <!--[routerLink]="['/', { outlets: { popup: 'tache-new/'+ tacheParProjet.id} }]"-->
+            <!---->
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

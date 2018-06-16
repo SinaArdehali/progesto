@@ -1,0 +1,64 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myAttributionTacheLabel" jhiTranslate="progestoApp.attributionTache.home.createOrEditLabel">Create or edit a Attribution Tache</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!attributionTache.iattributionTached">
+            <label for="id" jhiTranslate="global.field.id">IDattributionTache</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="attributionTache.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.attributionTache.tacheMere" for="field_tacheMere">Tache Mere</label>
+            <select class="form-control" id="field_tacheMere" name="tacheMere" [(ngModel)]="attributionTache.tacheMere" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="tacheOption.id === attributionTache.tacheMere?.id ? attributionTache.tacheMere : tacheOption" *ngFor="let tacheOption of taches; trackBy: trackTacheById">{{tacheOption.nomTache}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.attributionTache.proprietaireTache" for="field_proprietaireTache">Proprietaire Tache</label>
+            <select class="form-control" id="field_proprietaireTache" name="proprietaireTache" [(ngModel)]="attributionTache.proprietaireTache" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id === attributionTache.proprietaireTache?.id ? attributionTache.proprietaireTache : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>
+            </select>
+        </div>
+        <!--j'ai cree le champ ci dessous , mais ca n'est pas un attribut de la table AttrbutionTacheAemploye. ainsi lorsque
+                le chef de projet entrera 6 dans cette case., alros 6 rengistrements (rows) seront crees dans la table AttributionTacheAemploye avec
+                des dates et des quartDeJourneeDeLaDate vide. c'est lrosque lingenieurs les placera sur son calendrier que ces champs seront remplis.-->
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="progestoApp.attributionTache.combienJoursAttribuer" for="field_quartDeJourneeDeLaDate">Combien de jours voulez-vous attribuer à cet ingénieur?</label>
+            <input type="number" class="form-control" name="combienJoursAttribuer" id="field_combienJoursAttribuer"
+                   [(ngModel)]="attributionTache.combienJoursAttribuer" />
+        </div>
+        <div class="form-group" [hidden]="!attributionTache.date">
+            <label class="form-control-label" jhiTranslate="progestoApp.attributionTache.date" for="field_date">Date</label>
+            <div class="input-group">
+                <input id="field_date" type="text" class="form-control" name="date" ngbDatepicker  #dateDp="ngbDatepicker" [(ngModel)]="attributionTache.date"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" (click)="dateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group" [hidden]="!attributionTache.quartDeJourneeDeLaDate">
+            <label class="form-control-label" jhiTranslate="progestoApp.attributionTache.quartJournee" for="field_quartJournee">Quart Journee</label>
+            <input type="number" class="form-control" name="quartJournee" id="field_quartJournee"
+                [(ngModel)]="attributionTache.quartJournee"  />
+        </div>
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

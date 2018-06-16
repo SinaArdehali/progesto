@@ -1,0 +1,676 @@
+<script src="../../activite/mon-activite.service.ts"></script>
+<script src="projet.model.ts"></script>
+<script src="projet.component.ts"></script>
+<div class="fondDerriereTableau">
+    <br>
+
+    <h2>
+        <span class="bandeauGaucheTitre">&ensp;&ensp;Projets</span>
+        <button style="background-color: #222222;
+    border: 2px solid;
+    border-radius: 25px;
+    color: #00ad5f;" class="btn btn-primary float-right jh-create-entity create-projet"
+                [routerLink]="['/', { outlets: { popup: ['projet-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span jhiTranslate="progestoApp.projet.home.createLabel">
+            Create new Projet
+            </span>
+        </button>
+    </h2>
+
+
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+
+    <div class="table-responsive" *ngIf="projets?.length > 0">
+        <table class="table table-striped table table-condensed table-expand-main"
+               style="border-collapse:collapse;margin: auto; max-width: 1200px; margin-top:50px"
+               id="monTableau">
+
+            <thead>
+            <tr border="0" style="background-color: white;color: black; border-collapse:separate;
+        border:solid black 1px;
+        border-radius:6px;
+        -moz-border-radius:6px;" valign="middle">
+                <th class="tableauAjusteProjet" colspan="1"></th>
+                <th class="center element cacherOverflowHeader" colspan="1" style="border-left: 1px solid white;
+    border-right: 1px solid white;">
+                    BUDGET
+                    <div class="infobulle">
+                        BUDGET
+                    </div>
+                </th>
+                <th class="center element cacherOverflowHeader" colspan="4" style="border-left: 1px solid white;
+    border-right: 1px solid white;">
+                    REALISE
+                    <div class="infobulle">
+                        REALISE
+                    </div>
+                </th>
+                <th class="element cacherOverflowHeader" colspan="2" style="border-left: 1px solid white0;
+    border-right: 1px solid white;">
+                    PLANIFIE
+                    <div class="infobulle">
+                        PLANIFIE
+                    </div>
+                </th>
+                <th colspan="3"></th>
+            </tr>
+            <tr height="" style="background-color: white; color: black;">
+                <th>
+                    <div class="container tableauAjusteProjet"></div>
+                </th>
+                <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.nomProjet">Nom Projet</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.descriptionProjet">Description Projet</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.debutProjet">Debut Projet</span></th>-->
+                <!--<th><span jhiTranslate="progestoApp.projet.finProjet">Fin Projet</span></th>-->
+                <th class="center element cacherOverflowHeader" style="border-left: 1px solid white;
+    border-right: 1px solid white; font-size: 0.70rem">
+                    <span>Vendus</span>
+                    <div class="infobulle">
+                        Vendus
+                    </div>
+                </th>
+                <th class="center element cacherOverflowHeader" style="border-left: 1px solid white;
+    border-right: 1px solid rgba(255,255,255,.25); font-size: 0.70rem">
+                    <span>Consommés</span>
+                    <div class="infobulle">
+                        Consommés
+                    </div>
+                </th>
+                <th class="center element cacherOverflowHeader" style="border-left: 1px solid rgba(255,255,255,.25);
+    border-right: 1px solid rgba(255,255,255,.25); font-size: 0.70rem">
+                    <span>Reste à faire</span>
+                    <div class="infobulle">
+                        Reste à faire
+                    </div>
+                </th>
+                <th class="center element cacherOverflowHeader" style="border-left: 1px solid rgba(255,255,255,.25);
+    border-right: 1px solid rgba(255,255,255,.25); font-size: 0.70rem">
+                    <span>Réel</span>
+                    <div class="infobulle">
+                        Réel
+                    </div>
+                </th>
+                <th class="center element cacherOverflowHeader" style="border-left: 1px solid rgba(255,255,255,.25);
+    border-right: 1px solid white; font-size: 0.70rem">
+                    <span>Retard</span>
+                    <div class="infobulle">
+                        Retard
+                    </div>
+                </th>
+                <th class="center element cacherOverflowHeader" style="border-left: 1px solid white;
+    border-right: 1px solid rgba(255,255,255,.25);font-size: 0.70rem">
+                    <span>Attribués</span>
+                    <div class="infobulle">
+                        Attribués
+                    </div>
+                </th>
+                <th class="element cacherOverflowHeader" style="border-left: 1px solid rgba(255,255,255,.25);
+    border-right: 1px solid white;font-size: 0.70rem">
+                    <span>Reste à attribuer</span>
+                    <div class="infobulle cacherOverflowHeader">
+                        Reste à attribuer
+                    </div>
+                </th>
+                <!--<th><span jhiTranslate="progestoApp.projet.chefDuProjet">Chef Du Projet</span></th>-->
+                <th class="tableauDerniereCol"></th>
+            </tr>
+            </thead>
+
+            <tbody *ngFor="let projet of projets ;trackBy: trackId">
+
+            <!--<tr class="accordion-toggle" style="background-color:  #7db9e8" data-toggle="collapse" [attr.data-target]="'.demo' + projet.id" (click)="tacheByProjet(projet)">-->
+            <tr class="accordion-toggle" style="background-color:  white; color:black" data-toggle="collapse"
+                [attr.data-target]="'.demo' + projet.id" (click)="tacheByProjet(projet)">
+                <td class="tableauAjusteProjet">
+
+                    <div class="tableauAjusteProjet">
+                        <!--<div id="t1">INTERACTIVE TIMELINES</div>-->
+
+                        <!--aavec l'image a droite:-->
+                        <!--<span style="font-weight: bold; font-size: 1.5em; float:left">{{projet.nomProjet}}</span>-->
+                        <!--<img src="./pxdbypisezfowvsmgaoh.png" height="42" width="42" style="float: right" alt="Girl in a jacket">-->
+
+                        <!--avec limage a gauche-->
+                        <!--<img src="./pxdbypisezfowvsmgaoh.png" height="42" width="42" style="float: left" alt=">">-->
+
+                        <!--<span class="glyphicon glyphicon-menu-down js-rotate-if-collapsed"></span>-->
+                        <span style="cursor: pointer" data-toggle="collapse" [attr.data-target]="'.demo' + projet.id"
+                              aria-expanded="false">
+                                <img src="../../../content/images/icon-chevron-down-512px.png" height="42" width="42"
+                                     style="float: left" class=" js-rotate-if-collapsed">
+</span>
+                        <!--<div id="collapseExample" class="collapse">-->
+                        <!--Body-->
+                        <!--</div>-->
+                        <span style="font-weight: bold; font-size: 1.5em;">&emsp;{{projet.nomProjet}}</span>
+
+
+                        <!--<br>-->
+                        <!--&emsp;&emsp;&emsp;-->
+                        <!--<button style="float:right" type="button" class="btn btn btn-success btn-sm glyphicon glyphicon-eye-open" data-toggle="collapse" [attr.data-target]="'#demo' + projet.id" (click)="tacheByProjet(projet)">-->
+                        <!--<span class="fa fa-eye"></span>-->
+                        <!--<span class="d-none d-md-inline">Voir</span>-->
+                        <!--</button>-->
+                        <!--le modele contient ceci-->
+                        <!--<label for="accounting">Accounting</label>-->
+                        <!--<input type="checkbox" name="accounting" id="accounting" data-toggle="toggle">-->
+                    </div>
+                </td>
+                <td id="avantVente" class="center"><input [(ngModel)]="projet.joursVendusProjet" class="center form-control"
+                                                          style="color:black; font-weight:bold" readonly></td>
+                <!--<td>{{tacheParProjet.debutTache | date:'mediumDate'}}</td>-->
+                <td id="realisation" class="center"><input [(ngModel)]="projet.joursConsommeProjet" class="center form-control"
+                                                           style="color:black; font-weight:bold" readonly></td>
+                <!--<td>{{tacheParProjet.finTache | date:'mediumDate'}}</td>-->
+                <td id="realisation" class="center"><input [(ngModel)]="projet.joursResteAfaire" class="center form-control"
+                                                           style="color:black; font-weight:bold" readonly></td>
+                <!--<td>{{tacheParProjet.joursVendusTache}}</td>-->
+                <td id="realisation" class="center"><input [(ngModel)]="projet.joursReel" class="center form-control"
+                                                           style="color:white; font-weight:bold" readonly></td>
+                <td id="retard" class="center"><input [(ngModel)]="projet.joursRetardProjet" class="center form-control"
+                                                      style="color:black; font-weight:bold" readonly></td>
+                <td id="attribue" class="center"><input [(ngModel)]="projet.joursAttribueProjet" class="center form-control"
+                                                        style="color:black; font-weight:bold" readonly></td>
+                <td id="resteAttribuer" class="center"><input [(ngModel)]="projet.joursResteAttribuerProjet"
+                                                              class="center form-control" style="color:black; font-weight:bold"
+                                                              readonly></td>
+                <td class="text-right tableauDerniereCol">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                class="btn btn-outline-info btn-sm element"
+                                [routerLink]="['/', { outlets: { popup: 'tache-new/'+ projet.id} }]"
+                                style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;">
+                            <span class=" fa fa-plus"  style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>
+                            <div class="infobulle">
+                                Ajouter tâche à ce projet
+                            </div>
+                        </button>
+                        &nbsp;
+                        <button type="submit"
+                                [routerLink]="['../projet', projet.id ]"
+                                class="btn btn-info btn-sm element"
+                                style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;">
+                            <span class="fa fa-eye"  style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>
+                            <div class="infobulle">
+                                Voir projet
+                            </div>
+                        </button>
+                        &nbsp;
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'projet/'+ projet.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm element"
+                                style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;">
+                            <span class="fa fa-pencil"  style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>
+                            <div class="infobulle">
+                                Editer projet
+                            </div>
+                        </button>
+                        &nbsp;
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'projet/'+ projet.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm element"
+                                style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;
+position:relative">
+                            <span class="fa fa-remove" style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>
+                            <div class="infobulle">
+                                Supprimer projet
+                            </div>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+
+
+            <!--ng-class="apt.name.length >= 15 ? 'col-md-12' : (apt.name.length >= 10 ? 'col-md-6' : 'col-md-4')"-->
+            <!--[ngClass]="projet.id == this.varContenantId ? 'test' : 'test2'-->
+            <!--[ngClass]="{'test': projet.id == this.varContenantId}"-->
+            <!--<tr *ngFor="let tacheParProjet of tacheParProjets ;trackBy: trackId" id="demo{{projet.id}}">-->
+
+            <tr *ngFor="let tacheParProjetsBIS of tacheParProjetsBISs ;trackBy: trackId" class="demo{{projet.id}}"
+                data-toggle="collapse"
+                [ngClass]="projet.id == this.varContenantId ? 'colorationLigne collapse show' : 'test2'">
+
+
+                <!--<td><a [routerLink]="['../tache', tacheParProjet.id ]">{{tacheParProjet.id}}</a></td>-->
+                <!--<td>{{tacheParProjet.nomTache}}</td>-->
+                <!--attention car ci dessous il y a ecrit tacheLogin car dans lobject TacheEtDonneesDTO, j'ai nomme le champ de cette maniere.-->
+                <!--mais dans ma bdd, le champ est nomme nomTache-->
+                <td><span style="text-transform: capitalize; font-size: 1.5em;">&emsp;&emsp;&emsp;{{tacheParProjetsBIS.tacheLogin}}</span>
+                </td>
+
+                <!--<td>{{tacheParProjet.descriptionTache}}</td>-->
+                <!--<td><input [(ngModel)]="tacheParProjet.finTache"></td>-->
+                <td id="avantVente" class="center"><input [(ngModel)]="tacheParProjetsBIS.joursVendusTache"
+                                                          class="center form-control" readonly style="font-weight: bold"></td>
+                <!--<td>{{tacheParProjet.debutTache | date:'mediumDate'}}</td>-->
+                <td id="realisation" class="center"><input [(ngModel)]="tacheParProjetsBIS.joursConsommeTache"
+                                                           class="center form-control" readonly style="font-weight: bold"></td>
+                <!--<td>{{tacheParProjet.finTache | date:'mediumDate'}}</td>-->
+                <td id="realisation" class="center"><input [(ngModel)]="tacheParProjetsBIS.joursResteAfaire"
+                                                           class="center form-control" readonly style="font-weight: bold"></td>
+                <!--<td>{{tacheParProjet.joursVendusTache}}</td>-->
+                <td id="realisation" class="center"><input [(ngModel)]="tacheParProjetsBIS.joursReel" class="center form-control"
+                                                           readonly style="font-weight: bold"></td>
+                <td id="retard" class="center"><input [(ngModel)]="tacheParProjetsBIS.joursVendusTache" class="center form-control"
+                                                      style="color: red; font-weight: bold;" readonly></td>
+                <td id="attribue" class="center"><input [(ngModel)]="tacheParProjetsBIS.countAttribueFloat"
+                                                        class="center form-control" readonly style="font-weight: bold"></td>
+                <td id="resteAttribuer" class="center"><input [(ngModel)]="tacheParProjetsBIS.countResteAttribuerFloat"
+                                                              class="center form-control" readonly style="font-weight: bold"></td>
+
+                <!--<td>-->
+                <!--&lt;!&ndash;<div *ngIf="tache.aquelProjetAppartientCetteTache">&ndash;&gt;-->
+                <!--&lt;!&ndash;ci dessus, la relation qui va de projet a tache&ndash;&gt;-->
+                <!--&lt;!&ndash;<a [routerLink]="['../projet', tache.aquelProjetAppartientCetteTache?.id ]">{{tache.aquelProjetAppartientCetteTache?.nomProjet}}</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</td>-->
+
+                <!--<td>-->
+                <!--<button class="btn btn-outline-success fa fa-handshake-o" [routerLink]="['../tacheAffectation', tacheParProjet.id ]">-->
+                <!--<span>-->
+                <!--Affectations-->
+                <!--</span>-->
+                <!--</button>-->
+                <!--</td>-->
+                <!--<td width="300"><span>{{tacheParProjet.finTache}}</span>-->
+
+
+                <!--<td class="text-right">-->
+                <!--<div class="btn-group flex-btn-group-container">-->
+                <!--<button class="btn btn-warning btn-sm fa fa-handshake-o" [routerLink]="['../tacheAffectation', tacheParProjetsBIS.id ]">-->
+                <!--<span class="d-none d-md-inline">-->
+                <!--Affectations-->
+                <!--</span>-->
+                <!--</button>-->
+                <!--<button type="submit"-->
+                <!--[routerLink]="['../tache', tacheParProjetsBIS.id ]"-->
+                <!--class="btn btn-info btn-sm">-->
+                <!--<span class="fa fa-eye"></span>-->
+                <!--<span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>-->
+                <!--</button>-->
+                <!--<button type="submit"-->
+                <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tacheParProjetsBIS.id + '/edit'} }]"-->
+                <!--replaceUrl="true"-->
+                <!--queryParamsHandling="merge"-->
+                <!--class="btn btn-primary btn-sm">-->
+                <!--<span class="fa fa-pencil"></span>-->
+                <!--<span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>-->
+                <!--</button>-->
+                <!--<button type="submit"-->
+                <!--[routerLink]="['/', { outlets: { popup: 'tache/'+ tacheParProjetsBIS.id + '/delete'} }]"-->
+                <!--replaceUrl="true"-->
+                <!--queryParamsHandling="merge"-->
+                <!--class="btn btn-danger btn-sm">-->
+                <!--<span class="fa fa-remove"></span>-->
+                <!--<span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>-->
+                <!--</button>-->
+
+                <!--</div>-->
+                <!--</td>-->
+
+
+                <td class="text-right tableauDerniereCol">
+                    <div class="btn-group flex-btn-group-container">
+                        <button class="btn btn-warning btn-sm element"
+                                [routerLink]="['../tacheAffectation', tacheParProjetsBIS.id ]" style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;">
+                                <!--<span class="d-none d-md-inline">-->
+                                    <!--Affectations-->
+                                <!--</span>-->
+                            <span class="fa fa-handshake-o" style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>
+                            <div class="infobulle">
+                                Affectations
+                            </div>
+                        </button>
+                        &nbsp;
+                        <button type="submit"
+                                [routerLink]="['../tache', tacheParProjetsBIS.id ]"
+                                class="btn btn-info btn-sm element" style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;">
+                            <span class="fa fa-eye" style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>
+                            <div class="infobulle">
+                                Voir tâche
+                            </div>
+                            <!--<span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>-->
+                        </button>
+                        &nbsp;
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tache/'+ tacheParProjetsBIS.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm element"
+                                style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;">
+                            <span class="fa fa-pencil" style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>
+                            <div class="infobulle">
+                                Editer tâche
+                            </div>
+                            <!--<span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>-->
+                        </button>
+                        &nbsp;
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tache/'+ tacheParProjetsBIS.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm element"
+                                style="background-color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    color: black;">
+                            <span class="fa fa-remove" style="font-size:24px"></span>
+                            <span class="hidden-md-down"></span>.
+                            <div class="infobulle">
+                                Supprimer tâche
+                            </div>
+                            <!--<span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>-->
+                        </button>
+
+                    </div>
+                </td>
+
+
+            </tr>
+
+            <!--<tr class="demo{{projet.id}}" data-toggle="collapse" [ngClass]="projet.id == this.varContenantId ? 'test' : 'test2'">-->
+            <!--<td>-->
+            <!--<button type="submit" class="btn btn-outline-info btn-sm fa fa-plus" [routerLink]="['/', { outlets: { popup: 'tache-new/'+ projet.id} }]">-->
+            <!--<span class="glyphicon glyphicon-plus">Ajouter tâche</span>-->
+            <!--</button>-->
+            <!--</td>-->
+            <!--<td></td>-->
+            <!--<td></td>-->
+            <!--<td></td>-->
+            <!--<td></td>-->
+            <!--<td></td>-->
+            <!--<td></td>-->
+            <!--<td></td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<div style="margin: auto; max-width: 1200px; margin-top:50px">-->
+        <!--<data-table id="projets-grid"-->
+                    <!--headerTitle="Projets"-->
+                    <!--[items]="projets"-->
+                    <!--[itemCount]="projetCount"-->
+                    <!--(reload)="reloadProjets($event)"-->
+
+                    <!--[limit]="8"-->
+                    <!--[sortBy]="'nom'"-->
+                    <!--[sortAsc]="false"-->
+
+                    <!--[selectColumn]="true"-->
+                    <!--[multiSelect]="false"-->
+                    <!--[substituteRows]="false"-->
+                    <!--[expandableRows]="true"-->
+                    <!--[translations]="translations"-->
+                    <!--[indexColumnHeader]="'#'"-->
+                    <!--[selectOnRowClick]="true"-->
+        <!--&gt;-->
+            <!--<template #dataTableExpand let-item="item">-->
+                <!--<div [textContent]="item.descriptionProjet" style="padding: 5px; color: red"></div>-->
+            <!--</template>-->
+            <!--<data-table-column-->
+                <!--[property]="'nomProjet'"-->
+                <!--[header]="'Nom'"-->
+                <!--[sortable]="true"-->
+                <!--[cellColors]="cellColor">-->
+            <!--</data-table-column>-->
+            <!--<data-table-column-->
+                <!--[property]="'joursVendusProjet'"-->
+                <!--[header]="'Vendus'"-->
+                <!--[sortable]="true">-->
+            <!--</data-table-column>-->
+            <!--<data-table-column-->
+                <!--[property]="'consommes'"-->
+                <!--[header]="'Consomm'"-->
+                <!--[sortable]="true">-->
+            <!--</data-table-column>-->
+            <!--<data-table-column-->
+                <!--[property]="'resteafaire'"-->
+                <!--[header]="'Raf'"-->
+                <!--[sortable]="true">-->
+            <!--</data-table-column>-->
+            <!--<data-table-column-->
+                <!--[property]="'reel'"-->
+                <!--[header]="'Reel'"-->
+                <!--[sortable]="true">-->
+            <!--</data-table-column>-->
+            <!--<data-table-column-->
+                <!--[property]="'retard'"-->
+                <!--[header]="'Retard'"-->
+                <!--[sortable]="true">-->
+            <!--</data-table-column>-->
+            <!--<data-table-column-->
+                <!--[property]="'attribues'"-->
+                <!--[header]="'Attribues'"-->
+                <!--[sortable]="true">-->
+            <!--</data-table-column>-->
+            <!--<data-table-column-->
+                <!--[property]="'resteaattribuer'"-->
+                <!--[header]="'Reste à attribuer'"-->
+                <!--[sortable]="true">-->
+            <!--</data-table-column>-->
+        <!--</data-table>-->
+        <!--&lt;!&ndash;<div style="margin-top: 10px">&ndash;&gt;-->
+            <!--&lt;!&ndash;<b>Selected:</b>&ndash;&gt;-->
+            <!--&lt;!&ndash;<span *ngIf="projetsTable.selectedRow == null"><i>No item selected</i></span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<span [textContent]="projetsTable.selectedRow && projetsTable.selectedRow.item.title"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <div style="margin: auto; max-width: 1000px; margin-top:50px">
+        <data-table id="films-grid"
+                    headerTitle="Films"
+                    [items]="films"
+                    [itemCount]="filmCount"
+                    (reload)="reloadFilms($event)"
+
+                    [limit]="8"
+                    [sortBy]="'rating'"
+                    [sortAsc]="false"
+
+                    [selectColumn]="true"
+                    [multiSelect]="false"
+                    [substituteRows]="false"
+                    [expandableRows]="true"
+                    [translations]="translations"
+                    [indexColumnHeader]="'#'"
+                    [selectOnRowClick]="true"
+        >
+
+            <!-- 			<data-table
+                                [items]="item.description"
+                                >
+                                <data-table-column
+                                    [property]="'title'"
+                                    [header]="'Title'"
+                                    [sortable]="false">
+                                </data-table-column>
+                               <data-table-column
+                                    [property]="'year'"
+                                    [header]="'Année'"
+                                    [sortable]="false">
+                                </data-table-column>
+                        </data-table> -->
+            <!-- <div [textContent]="item.description" style="padding: 5px; color: gray"></div> -->
+
+
+
+
+            <!--<tr #dataTableExpand>-->
+                <!--<td>AAaA</td>-->
+                <!--<td>BBBB</td>-->
+                <!--<td>CCCC</td>-->
+                <!--<td>DDDD</td>-->
+            <!--</tr>-->
+
+                   <template #dataTableExpand let-item="item" >
+                        <tr *ngFor="let desc of item.description">
+                            <td>{{desc.title}}</td>
+                            <td>{{desc.year}}</td>
+                            <td>{{desc.rating}}</td>
+                            <td>{{desc.director}}</td>
+                        </tr>
+             			<data-table
+                                [items]="item.description"
+                                >
+                                <data-table-column
+                                    [property]="'title'"
+                                    [header]="'Title'"
+                                    [sortable]="false">
+                                </data-table-column>
+                               <data-table-column
+                                    [property]="'year'"
+                                    [header]="'Année'"
+                                    [sortable]="false">
+                                </data-table-column>
+                        </data-table>
+            <!-- <div [textContent]="item.description" style="padding: 5px; color: gray"></div> -->
+
+            </template>
+            <data-table-column
+                [property]="'title'"
+                [header]="'Title'"
+                [sortable]="true">
+            </data-table-column>
+            <data-table-column
+                [property]="'year'"
+                [header]="'Release year'"
+                [sortable]="true">
+            </data-table-column>
+            <data-table-column
+                [property]="'rating'"
+                [header]="'Rating'"
+                [sortable]="true"
+                [cellColors]="cellColor">
+            </data-table-column>
+            <data-table-column
+                [property]="'director'"
+                [header]="'Director'">
+            </data-table-column>
+        </data-table>
+
+    </div>
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<!--
+quelques pistesp our trouver une solution:
+il se peut que le probleme soit lié  a un tr qui se situe dans un autre tr
+j'aurai epeut etre du creer un autre table
+-->
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+<!--<script>-->
+
+
+<!--$(window).resize(function(){-->
+<!--var windowWidth = $(window).width();-->
+<!--var imgSrc = $('input');-->
+<!--var element = document.createElement('input');-->
+<!--element.style.width = "100px";-->
+<!--if(windowWidth <= 1200){-->
+<!--//            imgSrc.attr('width','http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a');-->
+<!--element.style.width = "40px";-->
+<!--}-->
+<!--else if(windowWidth > 1200){-->
+<!--//            imgSrc.attr('src','http://i.stack.imgur.com/oURrw.png');-->
+<!--element.style.width = "125px";-->
+<!--}-->
+<!--});-->
+<!--</script>-->

@@ -1,0 +1,482 @@
+/*misEnCommentairePourTester*/
+/*td:first-child {*/
+    /*max-width: 250px;*/
+    /*!*overflow: hidden;*!*/
+    /*text-overflow: ellipsis;*/
+/*}*/
+
+/*table tr, table tr td:nth-last-child(1) {*/
+/*display: block !important;*/
+/*clear: both;*/
+/*}*/
+/*!*table tr, table tr td {*!*/
+/*!*clear: both;*!*/
+/*!*}*!*/
+
+
+
+
+
+/*misEnCommentairePourTester*/
+/*.ajustementTable{*/
+    /*max-width: 10px;*/
+/*}*/
+
+/*misEnCommentairePourTester*/
+/*input {*/
+    /*!*min-width: 40px;*!*/
+    /*!*max-width: 125px;*!*/
+    /*!*width: 0.1%;*!*/
+    /*width: 40px;*/
+    /*background-color: orange;*/
+    /*border: none;*/
+/*}*/
+
+
+
+
+/*input*/
+/*{*/
+    /*background: transparent;*/
+    /*border: none;*/
+/*}*/
+
+
+/*@media all and (max-width: 125px) and (min-width: 40px), (min-width: 70px) {*/
+    /*input {*/
+        /*background-color: red;*/
+    /*}*/
+
+/*#avantVente{*/
+/*background-color: #B6FFB5;*/
+/*}*/
+
+/*#realisation{*/
+/*background-color: #FFEFD3;*/
+/*}*/
+
+/*#retard{*/
+/*background-color: #FFDCDC;*/
+/*}*/
+
+/*#resteAttribuer{*/
+/*background-color: #FCFFC9;*/
+/*}*/
+
+/*j'avais mis le b loc suivant pour centrer mes input field dans le tableau de projet component'*/
+.center {
+    text-align: center;
+    /*vertical-align: middle;*/
+}
+
+/*td, th {*/
+/*padding: 5px;*/
+/*}*/
+/*tr {*/
+/*height: 25px;*/
+/*}*/
+
+table, th, td, tr {
+    background-color: white;
+    font-color: black;
+    /*border:solid 1px;*/
+
+    /*border-collapse:collapse;*/
+    /*table-layout:fixed;*/
+
+    /*border-collapse:separate;
+        border:solid black 1px;
+        border-radius:6px;
+        -moz-border-radius:6px;*/
+
+        /*border-radius: 25px;*/
+}
+
+
+
+
+/*misEnCommentairePourTester*/
+/*#monTableau th:last-child{*/
+    /*min-width: 380px;*/
+    /*max-width: 381px;*/
+/*}*/
+
+
+
+
+
+/*!*brouillon: *!*/
+/*table {*/
+/*width: 750px;*/
+/*border-collapse: collapse;*/
+/*margin:50px auto;*/
+/*}*/
+
+/*th {*/
+/*background: #3498db;*/
+/*color: white;*/
+/*font-weight: bold;*/
+/*}*/
+
+/*td, th {*/
+/*padding: 10px;*/
+/*border: 1px solid #ccc;*/
+/*text-align: left;*/
+/*font-size: 18px;*/
+/*}*/
+
+/*.labels tr td {*/
+/*background-color: #2cc16a;*/
+/*font-weight: bold;*/
+/*color: #fff;*/
+/*}*/
+
+.label tr td label {
+    display: block;
+}
+
+[data-toggle="toggle"] {
+    display: none;
+}
+
+.table-expand-main {
+    margin-top: 20px;
+}
+
+/*misEnCommentairePourTester*/
+.tableauAjusteProjet{
+    /*min-width: 200px;*/
+    /*max-width: 250px;*/
+    /*width: 260px;*/
+    width:250px;
+    min-width:249px;
+}
+
+.tableauDerniereCol{
+    /*min-width:200px;*/
+    /*max-width:250px;*/
+    width:100px;
+    /*min-width:249px;*/
+}
+
+.test{
+    background-color: white;
+/*background-color: #393939;
+color: #00ad5f;*/
+
+}
+
+.colorationLigne{
+background-color: white;
+color: black;
+font-size:15px;
+font-weight: bold;
+}
+
+.test2{
+    /*background-color: green;*/
+    display:none;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: #757575;
+}
+
+.fa{
+    font-size: 14px;
+}
+
+.fermeImage{
+transform: rotate(270deg);
+background-color:red;
+}
+
+.ouvertImage{
+transform: rotate(20deg);
+background-color:green;
+}
+
+
+
+input{
+    /*min-width: 39px;*/
+    /*max-width: 100%;*/
+}
+
+
+
+
+
+
+
+#t1 {width: 220px;height: 45px;padding-top: 10px;position: relative;color: black;margin-left: 0; line-height:34px;font-size: 13px;text-align: center;text-transform: uppercase;
+    background: #7db9e8;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkYjllOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQxJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZTU3OTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #7db9e8 0%, #2989d8 41%, #1e5799 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#7db9e8), color-stop(41%,#2989d8), color-stop(100%,#1e5799));
+    background: -webkit-linear-gradient(left,  #7db9e8 0%,#2989d8 41%,#1e5799 100%);
+    background: -o-linear-gradient(left,  #7db9e8 0%,#2989d8 41%,#1e5799 100%);
+    background: -ms-linear-gradient(left,  #7db9e8 0%,#2989d8 41%,#1e5799 100%);
+    background: linear-gradient(to right,  #7db9e8 0%,#2989d8 41%,#1e5799 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=1 );
+
+}
+#t1:after {content: "";position: absolute;width: 0;height: 0;left: 220px; top:0;
+    border-top: 28px solid transparent;
+    border-left: 16px solid #1e5799;
+    border-bottom: 27px solid transparent;
+}
+
+
+
+ [data-toggle="collapse"][aria-expanded="true"] > .js-rotate-if-collapsed
+        {
+            -webkit-transform: rotate(180deg);
+            -moz-transform:    rotate(180deg);
+            -ms-transform:     rotate(180deg);
+            -o-transform:      rotate(180deg);
+            transform:         rotate(180deg);
+        }
+
+
+/*.bandeauGaucheTitre{*/
+    /*!*background-color: #353d47;*!*/
+    /*!*background:transparent;*!*/
+    /*opacity: 1;*/
+    /*!*width: 3em;*!*/
+    /*color: white;*/
+    /*font-weight: 900;*/
+
+    /*!*text-shadow: 3px 3px 0px #000;*!*/
+    /*position:absolute;*/
+    /*top:138px;*/
+    /*left:0px;*/
+    /*!*right: 140px;*!*/
+    /*width:155px;*/
+    /*!*height:20px;*!*/
+    /*background-color:black;*/
+    /*!* z-index:0;*!*/
+    /*opacity:0.5;*/
+    /*!**/
+     /*position:fixed;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*width:30em;*/
+        /*height:18em;*!*/
+
+    /*!* position: absolute;*/
+      /*top: 50%;*/
+      /*left: 50%;*/
+      /*-moz-transform: translateX(-50%) translateY(-50%);*/
+      /*-webkit-transform: translateX(-50%) translateY(-50%);*/
+      /*transform: translateX(-50%) translateY(-50%);*!*/
+
+    /*height:1.5em;*/
+    /*!*display: flex;*!*/
+
+    /*align-items: center;*/
+    /*justify-content: center;*/
+
+    /*!*margin-top: 9px;*!*/
+    /*padding-top: 10px;*/
+/*!*text-transform: uppercase;*!*/
+
+
+/*}*/
+
+.fondDerriereTableau{
+ background-color: white;
+}
+
+.cacherOverflowHeader{
+    white-space: nowrap; text-overflow:ellipsis; overflow: hidden;
+}
+
+/*.overflowTH{*/
+    /*max-width:75px;*/
+    /*!*max-width:120px;*!*/
+/*}*/
+
+
+
+
+
+
+/*le css quil ya ci dessous , correspond au css que lon a dans les infosbulles au cas ou la resolution est de 1200*800*/
+.element{
+    /*width : 100px;*/
+    background-color : rgba(0,0,0,0.3);
+    /*margin-top : 20px;*/
+    margin-right :auto;
+    margin-left : auto;
+}
+.infobulle{
+    transform : scale(0) rotateX(-180deg);
+    position : absolute;
+    background-color : #2e3048;
+    color : white;
+    border-radius : 5px;
+    padding : 8px;
+    margin-top : 10px;
+    box-shadow : 1px 1px 0 0.5px rgba(0,0,0,0.3);
+    border-bottom : 3px solid rgba(255,255,255,0.3);
+    border-left : 10px solid transparent;
+    border-right : 10px solid transparent;
+    transition : 0.01s;
+    z-index: 100000;
+}
+.infobulle::before{
+    content : '';
+    position : absolute;
+    border-bottom : 8px solid #2e3048;
+    border-left : 8px solid transparent;
+    border-right : 8px solid transparent;
+    margin-top : 16px;
+    /*margin-top : -16px;*/
+    margin-left : 10px;
+}
+.element:hover > .infobulle{
+    transform : scale(1) rotateX(0deg);
+}
+
+
+
+
+
+
+
+input{
+    width: 55px;
+}
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 14px/1.4 Georgia, Serif;
+}
+#page-wrap {
+    margin: 50px;
+}
+p {
+    margin: 20px 0;
+}
+
+/*
+Generic Styling, for Desktops/Laptops
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+th {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        /*width: 45%;*/
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    td:nth-of-type(1):before { content: "First Name"; }
+    td:nth-of-type(2):before { content: "Last Name"; }
+    td:nth-of-type(3):before { content: "Job Title"; }
+    td:nth-of-type(4):before { content: "Favorite Color"; }
+    td:nth-of-type(5):before { content: "Wars of Trek?"; }
+    td:nth-of-type(6):before { content: "Porn Name"; }
+    td:nth-of-type(7):before { content: "Date of Birth"; }
+    td:nth-of-type(8):before { content: "Dream Vacation City"; }
+    td:nth-of-type(9):before { content: "GPA"; }
+    td:nth-of-type(10):before { content: "Arbitrary Data"; }
+}
+
+/*!* Smartphones (portrait and landscape) ----------- *!*/
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-width : 480px) {*/
+    /*body {*/
+        /*padding: 0;*/
+        /*margin: 0;*/
+        /*width: 320px; }*/
+/*}*/
+
+/*!* iPads (portrait and landscape) ----------- *!*/
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {*/
+    /*body {*/
+        /*width: 495px;*/
+    /*}*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+:host /deep/ .index-column,
+:host /deep/ .index-column-header {
+    text-align: right;
+}
+
+:host /deep/ .data-table .data-table-row.selected {
+    background-color: #E4EDF9;
+}

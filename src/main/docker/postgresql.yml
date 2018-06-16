@@ -1,0 +1,11 @@
+version: '2'
+services:
+    progesto-postgresql:
+        image: postgres:9.6.5
+        # volumes:
+        #     - ~/volumes/jhipster/progesto/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=progesto
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

@@ -1,0 +1,49 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "tacheEmploye",
+            "otherEntityName": "attributionTache",
+            "otherEntityRelationshipName": "tacheMere"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "projetMere",
+            "otherEntityName": "projet",
+            "otherEntityField": "nomProjet"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nomTache",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descriptionTache",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "debutTache",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "finTache",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "nbQuartJourAttribuer",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "joursVendusTache",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20180108131315",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tache",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

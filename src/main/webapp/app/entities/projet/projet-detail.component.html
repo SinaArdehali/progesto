@@ -1,0 +1,53 @@
+
+<div *ngIf="projet">
+    <h2><span jhiTranslate="progestoApp.projet.detail.title">Projet</span> {{projet.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="progestoApp.projet.nomProjet">Nom Projet</span></dt>
+        <dd>
+            <span>{{projet.nomProjet}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.projet.descriptionProjet">Description Projet</span></dt>
+        <dd>
+            <span>{{projet.descriptionProjet}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.projet.debutProjet">Debut Projet</span></dt>
+        <dd>
+            <span>{{projet.debutProjet | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.projet.finProjet">Fin Projet</span></dt>
+        <dd>
+            <span>{{projet.finProjet | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.projet.joursVendusProjet">Jours Vendus Projet</span></dt>
+        <dd>
+            <span>{{projet.joursVendusProjet}}</span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.projet.membresProjet">Membres Projet</span></dt>
+        <dd>
+            <span *ngFor="let membresProjet of projet.membresProjets; let last = last">
+                {{membresProjet.login}}{{last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span jhiTranslate="progestoApp.projet.chefDuProjet">Chef Du Projet</span></dt>
+        <dd>
+            <span *ngFor="let chefDuProjet of projet.chefDuProjets; let last = last">
+                {{chefDuProjet.login}}{{last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'projet/'+ projet.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

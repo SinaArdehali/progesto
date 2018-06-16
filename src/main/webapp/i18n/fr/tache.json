@@ -1,0 +1,43 @@
+{
+    "progestoApp": {
+        "tache" : {
+            "home": {
+                "title": "Taches",
+                "createLabel": "Créer un nouveau Tache",
+                "createOrEditLabel": "Créer ou éditer un Tache"
+            },
+            "created": "Un nouveau Tache a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Tache avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Tache avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer la Tache {{ id }} ? <br> Toutes les affectations associées à cette tâche seront supprimées."
+            },
+            "detail": {
+                "title": "Tache"
+            },
+            "affectation": {
+                "title1": "PROJET: ",
+                "title2": " - TACHE: ",
+                "loginInge": "Login de l'ingénieur",
+                "nbJoursAttribues": "Nombre de jours<br>attribués pour cette tâche",
+                "nbJoursEffectues":"Nombre de jours<br>effectués",
+                "nbJoursRestants":"Nombre de jours<br>restant à faire"
+            },
+            "nomTache": "Nom Tache",
+            "descriptionTache": "Description Tache",
+            "debutTache": "Debut Tache",
+            "finTache": "Fin Tache",
+            "nbQuartJourAttribuer": "Nb Quart Jour Attribuer",
+            "joursVendusTache": "Vendus",
+            "joursConsommeTache":"Consommé",
+            "joursResteAfaire": "Reste à faire",
+            "joursReel": "Réel",
+            "joursRetardTache": "Retard",
+            "joursAttribueTache": "Attribué",
+            "joursResteAttribuerTache": "Reste à attribuer",
+            "tacheEmploye": "Tache Employe",
+            "projetMere": "Projet Mere",
+            "alerteReste": "Il vous reste<br> jours avant la<br>fin du projet."
+        }
+    }
+}
