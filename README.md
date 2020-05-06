@@ -1,4 +1,7 @@
 # progesto
+
+**Progesto is a project and team management application.**
+
 This application was generated using JHipster 4.8.1, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.8.1](http://www.jhipster.tech/documentation-archive/v4.8.1).
 
 ## Development
